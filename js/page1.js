@@ -69,8 +69,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 setTimeout(function(){$(".bg11").css({'left': ''});},1000);
 
                 setTimeout(function(){
-                    $(".bg14").animate({'bottom': '-2000px' },0);
-                    $(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
+                    $(".bg14").animate({'bottom': '-2000px' ,opacity:0},0);
+                    //$(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
                 },0);
             }
             if(index==9 ){
@@ -149,11 +149,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             $(".bg13").animate({'top': '-2000px',opacity:0});
             setTimeout(function(){$(".bg12").css({'left': ''});},1000);
             setTimeout(function(){$(".bg11").css({'left': ''});},1000);
-
-            setTimeout(function(){
-                $(".bg14").animate({'bottom': '-2000px' },0);
-                $(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
-            },0);
+            $(".bg14").animate({'bottom': '-2000px' ,opacity:0},0);
             stopEvent()
             return false;
         }

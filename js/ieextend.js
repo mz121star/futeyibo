@@ -72,7 +72,7 @@ define([], function () {
 		   if(index == 4){
 				$(".bg41").animate({bottom: '0%','margin-top': '2000px'});
 				$(".bg42").animate({bottom: '200%',opacity: 0,'margin-top':'-300px'});
-               setTimeout(function(){$(".bg43").animate({bottom: '-449px',opacity: 0})},1000);
+                $(".bg43").animate({bottom: '-449px',opacity: 0});
 				$(".bg44").animate({right: '-900px'},0);		   
 		   }
 		   if(index==5){
