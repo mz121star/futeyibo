@@ -50,8 +50,8 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
            $(".slider .slide[data-index='"+newSlide+"'] .slidecontent").fadeIn();
 
            $(".backstretch .car ",$(".slide")[newSlide]).jrumble({
-               x:4 ,
-               y: 0,
+               x:2 ,
+               y: 1,
                rotation: 0,
                speed: 0
            });
@@ -86,8 +86,8 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
     $(".backstretch",$(".slide")[2]).append($("<img  class='car' style='width:auto;height: 100%; margin-left: -10% ' src='images/3/1_1.png' />")) ;
     $(".backstretch",$(".slide")[3]).append($("<img  class='car'  style='width:auto;height: 100%; margin-left: -10% ' src='images/4/1_1.png' />")) ;
     $(".backstretch .car ",$(".slide")[0]).jrumble({
-        x:4 ,
-        y: 0,
+        x:2 ,
+        y: 1,
         rotation: 0,
         speed: 0
     });
