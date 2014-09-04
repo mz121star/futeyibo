@@ -20,7 +20,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				if(index==3){
 					$('.bg3-31').animate({'bottom':'15%','margin-top':0},1000);
 					$('.bg3-32').animate({'bottom':'15%',opacity:1,'margin-top':0},1000);
-					$('.bg3-33').animate({'left':'40%'},1000);
+					$('.bg3-33').delay(1000).animate({'left':'40%'},1000);
 				}
 				if(index==4){
 					$('.bg71').delay(100).animate({'bottom': '250px',left:0},1000);
@@ -40,7 +40,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				if(index==3){
 					$('.bg3-31').animate({bottom:'0%','margin-top':'2000px'});
 					$('.bg3-32').animate({bottom:'200%',opacity:0,'margin-top':'-300px'});
-					$('.bg3-33').animate({right:'2000px'});
+					$('.bg3-33').animate({left:'2000px'});
 				}
 				if(index==4){
 					$('.bg71').animate({left:'-800px'});
