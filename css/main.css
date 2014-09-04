@@ -715,7 +715,7 @@ ol, ul, li {
 
 
 .header { position: absolute; left: 50%; top: 9px; width: 960px; height: 81px; margin: 0 0 0 -480px; z-index: 1003; }
-.header a.logo { display: block; background: url(../images/logo.png) no-repeat; width: 150px; height: 31px; }
+.header a.logo { display: block; background: url(../images/logo.png) no-repeat; width: 155px; height: 31px; }
 .header .tel{ float:right; background:url(../images/tel.png) no-repeat; width:195px; height:11px; text-indent:-9999em; margin:15px 0 0 0;}
 .header-nav {width: 960px; height: 29px; margin: 12px 0 0 0; background: url(../images/header-nav.png) center 0 no-repeat; position:relative;}
 .header-nav ul{ z-index:100; position:relative;}
