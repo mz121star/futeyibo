@@ -114,7 +114,7 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 
 .bg11 { position: absolute; top: 0; width: 100%; height: 557px; background: url(../images/1/leaf-left.png) 50% 0 no-repeat; transition: all 0s;}
 .bg12 { position: absolute; bottom: 10%;    left: 25%;     width: 100%;    height: 575px; background: url(../images/1/leaf-right.png) 50% 0 no-repeat; opacity: 0;  bottom: 90px\0; z-index: 999; top: 0;}
-.bg13 { position: absolute; top: 2000px;top:20000px\9;width: 100%; left: 30%; height: 100%; background: url(../images/1/flag1.png) 50% 0 no-repeat; transition: all 0s; /* display: none; */ z-index: 99;}
+.bg13 { position: absolute; top: 2000px; width: 100%; left: 30%; height: 100%; background: url(../images/1/flag1.png) 50% 0 no-repeat; transition: all 0s; /* display: none; */ z-index: 99;}
 .bg14 { position: absolute; bottom: -2000px; width: 100%; left: 30%; height: 299px; background: url(../images/1/flag2.png) 50% 0 no-repeat; transition: all 0s; /* display: none; */}
 .bg15 { position: absolute; bottom: 0px; width: 100%; left: 45%; height: 124px; background: url(../images/1/flag3.png) 50% 0 no-repeat; transition: all 1s; display: none;}
 .hgroup { position: absolute; width: 554px; height: 176px; left: 50%; top: 25%; margin: 0 0 0 -277px; text-indent: -9999px; background-image: url(../images/slogan.png); opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
@@ -208,7 +208,7 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 .bg102 { position: absolute; width: 100%; top: 25%; height: 79px; background: url(../images/bg102.png) 50% 0 no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
 .bg103 { position: absolute; width: 100%; top: 25%; height: 37px; margin-top: 110px; background: url(../images/bg103.png) 50% 0 no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
 .go { position: absolute; left: 50%; top: 55%; width: 254px; height: 70px; margin-top: 220px; margin-left: -127px; text-indent: -9999px; background-image: url(../images/btn.png); opacity: 0; transition: all 1s;}
-.bg111{  position: absolute;   width: 293px;   height: 156px; background: url(../images/1/flag11_1.png) 50% 20% no-repeat;   top: 120px;  left: -900px; transition: all 1s;}
+.bg111{  position: absolute;   width: 293px;   height: 156px; background: url(../images/1/flag11_1.png) 50% 20% no-repeat;   top: 120px;  right: 2000px; transition: all 1s;}
 .bg121{  position: absolute;   width: 759px;   height: 194px;   background: url(../images/1/flag12_1.png) 50% 20% no-repeat;   top: 80px;  left: -900px; transition: all 1s;}
 
 .bg131{  position: absolute;   width: 100%;   height: 100%;   /* background: url(../images/1/flag_131.png) 50% 20% no-repeat; */   /* background-size: cover; */  top: 0px;  left: 0px;   /* transition: all 1s; */}
@@ -242,7 +242,7 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 
 
 .bg3-41 {  position: absolute;   width: 283px;   height: 336px;   background: url(../images/3/flag4_1.png) 50% 20% no-repeat;   top: 100px;  left: 2000px; transition: all 1s;  opacity: 1;  z-index: 99;}
-.bg4-1 {  position: absolute;   width: 283px;   height: 336px;   background: url(../images/4/flag1_1.png) 50% 20% no-repeat;   top: 2000px;  right: 100px; transition: all 1s;  opacity: 0;  z-index: 99;  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);}
+.bg4-1 {  position: absolute;   width: 283px;   height: 336px;   background: url(../images/4/flag1_1.png) 50% 20% no-repeat;   top: 2000px;  right: 100px; transition: all 1s;  opacity: 1;  z-index: 99;}
 .bg4-21   {  position: absolute;   width: 528px;   height: 172px;   background: url(../images/4/flag2_1.png) 50% 20% no-repeat;   top: 100px;  left: 2000px; transition: all 1s;  opacity: 1;  z-index: 99;}
 
 
@@ -259,7 +259,7 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 .bg1111_1{ position: absolute; top: 0; width: 100%; height: 100%; /* background: url(../images/1/slide10_2.jpg) 50% 0 no-repeat; */ transition: all 0s;}
 
 .bg1111_111 { position: absolute; top: 0; width: 100%; height: 100%; /* background: url(../images/1/slide10_1.jpg) 50% 0 no-repeat; */ transition: all 0s;}
-.bg1111_111 img,.bg1111_11 img,.bg1111_1 img {height: 100%;width: 100%}
+.bg1111_111 img,.bg1111_1 img,.bg1111_11 img{height: 100%}
 /* CSS3过度及动画 */
 
 
@@ -285,7 +285,7 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 .active .bg42 { bottom: 15%; transition-delay: 1.1s;opacity: 1; margin-top: 0px;}
 .active .bg3-31 { bottom: 15%; transition-delay: 0.7s;opacity: 1; margin-top: 0px;}
 .active .bg3-32 { bottom: 15%; transition-delay: 0.7s;opacity: 1; margin-top: 0px;}
-.active .bg43 { bottom: 15%; transition-delay: 2s; z-index: 99;}
+.active .bg43 { bottom: 15%; transition-delay: 0.9s; z-index: 99;}
 .active .bg44 { top: 0; right: 0px; transition-delay: 1.9s;}
 .active .bg51 { /* margin-left: -551px; */ opacity: 1; transition-delay: 0.7s;}
 .active .bg52 { margin-left: -253px; opacity: 1; transition-delay: 0.7s;}
@@ -311,8 +311,8 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 .active .bg10_1{margin-left: 230px; opacity: 1; transition-delay: 2s;left: -200px;transition-duration: 1s;top: 20px;}
 .active .bg102, .active .bg103 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
 .active .go { top: 25%; opacity: 1; transition-delay: 1.2s;}
-.active .bg111{left: 300px; opacity: 1; transition-delay: 0.7s;}
-.active .bg1111{/* left: 300px; */ opacity: 0; transition-delay: 0.7s;transition-duration: 6s;/* z-index: 99; *//* height: 100px; *//* margin-top: 80%; */}
+.active .bg111{right: 300px; opacity: 1; transition-delay: 0.7s;}
+.active .bg1111{/* left: 300px; */ opacity: 1; transition-delay: 0.7s;transition-duration: 6s;/* z-index: 99; *//* height: 100px; *//* margin-top: 80%; */}
 .active .bg1111_1{/* left: 300px; */ opacity: 1; /* transition-delay: 0.7s; */transition-duration: 0s;/* z-index: 99; *//* height: 602px; *//* margin-top: 80%; */overflow: hidden;}
 .active .bg121{left: 200px; opacity: 1; transition-delay: 0.7s;}
 .active .bg131{/* left: -200px; */ /* opacity: 1; */ /* transition-delay: 0.5s; *//* transition-duration: 3.5s; *//* top: 2000px; */}
@@ -332,18 +332,13 @@ body .active .bg2-31_1{opacity: 0;transition-duration: 2s;transition-delay: 0.7s
 .active .bg3-12 {left: 100px; opacity: 1; /* transition-delay: 0.7s; */}
 .active .bg3-13 {/* left: 600px; opacity: 0; transition-delay: 1s; */}
 .active .bg3-21 {right: 100px; opacity: 1; transition-delay: 0.7s;}
-.active .bg3-33 {right: 40%; opacity: 1; transition-delay: 0.7s;}
+.active .bg3-33 {left: 40%; opacity: 1; transition-delay: 0.7s;}
 .active .bg3-41 {left: 100px; opacity: 1; transition-delay: 0.7s;}
 
-.active .bg4-1{
-    top: 100px;
-/*right: 100px; top: 100px;opacity: 1; transition-delay: 0.7s;*/
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-    opacity: 1;
-}
+.active .bg4-1{/*right: 100px; top: 100px;opacity: 1; transition-delay: 0.7s;*/}
 .active .bg4-21{left: 100px; opacity: 1; transition-delay: 0.7s;}
 
-.active .bg4-31{  opacity: 0;   transition-delay: 1s;  transition-duration: 7s;   }
+.active .bg4-31{  opacity: 0;   transition-delay: 1s;  transition-duration: 4s;   }
 .active .bg4-32{  opacity: 1;   transition-delay: 1s;  transition-duration: 1s;  top: 100px;  right: 200px;}
 .active .bg4-41{  /* opacity: 1; */   /* transition-delay: 1s; */  /* transition-duration: 1s; */  /* top: 220px; */  /* right: 40px; */}
 .active .bg4-42{  opacity: 1;   transition-delay: 1s;  transition-duration: 1s;  top: 150px;  right: 400px;}

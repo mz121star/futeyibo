@@ -82,7 +82,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".section11 .changeable").animate({
                     height: '100px'
                 }, 1000 );
-                window.setTimeout(function(){$(".bg1111_1").animate({'top': '-0px'},1000)},1000)
+                window.setTimeout(function(){$(".bg1111_1").animate({'top': '-0px'},0)},0)
             }
             if(index==11){
 
