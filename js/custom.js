@@ -35,6 +35,13 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch'],function(
         }
 
     }
+    var added={
+        1:true,
+        2:true,
+        3:true,
+        4:true
+
+    }
        $(".slider").on("afterSliding", function(event){
 
 
@@ -42,15 +49,21 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch'],function(
            var newSlide = event.newSlide;
            $(".slider .slide[data-index='"+newSlide+"'] .slidecontent").fadeIn();
 
-           var img=$("<img src='images/1/1_1.png' />")
-           $(".backstretch",$(".slide")[newSlide]).append(img)
-           shake(img);
+           var img=$("<img style='width:auto;height: 100%; margin-left: -10% ' src='images/"+(parseInt(event.newSlide)+1)+"/1_1.png' />")
+           if(added[newSlide]){
+               $(".backstretch",$(".slide")[newSlide]).append(img);
+
+               added[newSlide]=false;
+           }
+
+
+           //shake(img);
        });
 
        $(".slide#first").backstretch("images/1/1.jpg");
-       $(".slide#sec").backstretch("images/2/1.png");
-       $(".slide#thirth").backstretch("images/3/1.png");
-       $(".slide#fourth").backstretch("images/4/1.png");
+       $(".slide#sec").backstretch("images/2/1.jpg");
+       $(".slide#thirth").backstretch("images/3/1.jpg");
+       $(".slide#fourth").backstretch("images/4/1.jpg");
 
        $('.slide .backstretch img').on('dragstart', function(event) { event.preventDefault(); });
 
