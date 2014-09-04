@@ -682,7 +682,7 @@ body{
 /*
  *底部
  * */
-.footer { width: 1440px; background:#fff; position: fixed; /* left:50%; */ /* top:640px; */ bottom: 1px; /* margin:0 0 0 -720px; */ z-index:500; display: none;}
+.footer { width: 100%; background:#fff; position: fixed; /* left:50%; */ /* top:640px; */ bottom: 1px; /* margin:0 0 0 -720px; */ z-index:500; display: none;}
 .site-map { padding: 0 0 0 242px; }
 .site-map ul { overflow: hidden; padding: 23px 0 25px 0; }
 .site-map li { float: left; padding: 0 23px 0 0; }

@@ -29,8 +29,8 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				}
 			}
 			
-            if(index==4){
-                 $(".footer").show(1000);
+            if(index==5){
+                 $(".footer").show( );
             }
         } ,
         onLeave: function(index, nextIndex, direction){
@@ -57,8 +57,8 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				}
 			}
 			
-            if(index==4 ){
-                $(".footer").hide(1000);
+            if(index==5 ){
+                $(".footer").hide( );
             }
         }
     });
