@@ -91,7 +91,7 @@ define([], function () {
 		   }
 		   if(index==9){
 				$('.bg1111').stop(true).animate({opacity:1},0);
-				$('.bg111').animate({left:'-900px',opacity:0},1000);
+				//$('.bg111').animate({left:'-900px',opacity:0},1000);
                $('.bg1111_1').css("filter","progid:DXImageTransform.Microsoft.Alpha(opacity=0)")
 		   }
 		   if(index==10){
