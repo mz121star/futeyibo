@@ -17,7 +17,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
 
         slidesNavigation: true,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-           if(anchorLink==9){
+           if(index==9){
 
                $(".section11 .covered").css({
                    "background-image":"url('../images/1/slide11_1.jpg')"
@@ -82,6 +82,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".section11 .changeable").animate({
                     height: '100px'
                 }, 1000 );
+                window.setTimeout(function(){$(".bg1111_1").animate({'top': '-0px'},1000)},1000)
             }
             if(index==11){
 
