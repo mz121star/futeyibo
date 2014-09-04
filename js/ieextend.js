@@ -43,7 +43,7 @@ define([], function () {
 		   if(index==10){
 				//$('.bg121').animate({left:'200px'},1000);
 				$('.bg1111').animate({opacity:0},6000);
-				$('.bg111').animate({left:'300px',opacity:1},1000);
+				$('.bg111').animate({right:'300px',opacity:1},1000);
 		   }
 		   if(index==11){
 				$('.bg121').animate({left:'200px'},1000);
@@ -97,7 +97,7 @@ define([], function () {
 		   if(index==10){
 				//$('.bg121').animate({left:'-900px'},1000);
 				$('.bg1111').stop(true).animate({opacity:1},0);
-				$('.bg111').animate({left:'-900px',opacity:0},1000);
+				$('.bg111').animate({right:'2000px',opacity:0},1000);
 		   }
 		   if(index == 11){
 				$('.bg121').animate({left:'-900px'},1000);
