@@ -20,7 +20,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				if(index==3){
 					$('.bg21').animate({top:0,right:0},1000);
 					$(".bg2-32").delay(100).animate({'left': '0',top:0,opacity:1},1000);
-					$(".bg2-33").delay(100).animate({'left': '300px',opacity:1},1000);
+					$(".bg2-33").delay(100).animate({'left': '40%',opacity:1},1000);
                     $(".bg2-34").delay(700).animate({'opacity':1},2000);
 					$(".bg2-31_1").delay(300).animate({opacity:0},2000);	
 				}

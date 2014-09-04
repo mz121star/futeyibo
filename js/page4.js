@@ -13,8 +13,8 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             if(index==4){
               $(".bg4-41").css({ "top":"400px","right":"450px"}).delay(10).animate( {"top": "220px","right": "40px"}, 1000, 'easeInCirc', function(){  });
             }
-            if(index==6){
-                $(".footer").show(1000);
+            if(index==7){
+                $(".footer").show( );
             }
             if(!Modernizr.csstransitions){
                 if(index==1){
@@ -48,8 +48,8 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                 $(".tip").hide();
 
             }
-            if(index==6 ){
-                $(".footer").hide(1000);
+            if(index==7 ){
+                $(".footer").hide( );
             }
             if(index==4){
              /*   console.log(1);

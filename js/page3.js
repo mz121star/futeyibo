@@ -8,8 +8,8 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
         slidesNavigation: true       ,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
 
-            if(index==4){
-                $(".footer").show(1000);
+            if(index==5){
+                $(".footer").show( );
             }
 			
 			if(!Modernizr.csstransitions){
@@ -33,8 +33,8 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                 $(".tip").hide();
 
             }
-            if(index==4){
-                $(".footer").hide(1000);
+            if(index==5){
+                $(".footer").hide( );
             }
 			if(!Modernizr.csstransitions){
 				if(index==2){
@@ -76,7 +76,9 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             $(".bg3-11").animate({
                 left: '100px'
             }, 0 );
-            $(".bg3-13").animate({"opacity":"0","display":"block"},1,'easeInCirc',function(){}).delay(10).animate({"opacity":"1"},1000, 'easeInCirc',function(){})
+            $(".bg3-13").animate({"opacity":"0","display":"block"},1,'easeInCirc',function(){}).delay(10).animate({"opacity":"1"},1000, 'easeInCirc',function(){
+                $(".bg3-13").css('filter','');
+            })
             _section1 = true;
             stopEvent()
             return false;

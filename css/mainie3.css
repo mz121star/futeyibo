@@ -122,8 +122,8 @@
 .no-csstransitions .bg3-11 {  position: absolute;   width: 594px;   height: 691px;   background: url(../images/3/flag1_1.png) 50% 20% no-repeat;   bottom: 0px;  left: -2000px; }
 .no-csstransitions .bg3-12 {  position: absolute;   width: 286px;   height: 255px;   background: url(../images/3/flag1_2.png) 50% 20% no-repeat;   top: 122px;  left: 2000px;}
 
-.no-csstransitions .bg3-13 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); position: absolute;   width: 283px;   height: 477px;   background: url(../images/3/flag1_3.png) 50% 20% no-repeat;   top: 0px;  left: 600px;  opacity: 0;}
-.no-csstransitions .bg3-14 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); position: absolute;   width: 830px;   height: 425px;   background: url(../images/3/flag1_4.png) 50% 20% no-repeat;   top: 200px;  left: 500px; opacity: 1;}
+ .no-csstransitions .bg3-13 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); position: absolute;   width: 283px;   height: 477px;   background: url(../images/3/flag1_3.png) 50% 20% no-repeat;   top: 0px;  left: 600px;  opacity: 0;}
+/*.no-csstransitions .bg3-14 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); position: absolute;   width: 830px;   height: 425px;   background: url(../images/3/flag1_4.png) 50% 20% no-repeat;   top: 200px;  left: 500px; opacity: 1;}*/
 
 .no-csstransitions .bg3-21 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);  position: absolute;   width: 539px;   height: 288px;   background: url(../images/3/flag2_1.png) 50% 20% no-repeat;   top: 200px;  right: 2000px;  opacity: 1;}
 .no-csstransitions .bg3-33 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); position: absolute;   width: 283px;   height: 336px;   background: url(../images/3/flag3_1.png) 50% 20% no-repeat;   top: 200px;  left: 2000px;  opacity: 1;}
@@ -551,38 +551,7 @@ body{
 
 
 
-/*
- *底部
- * */
-.footer { width: 1440px; background:#fff; position: fixed; left:50%; /* top:640px; */ bottom: 1px; margin:0 0 0 -720px; z-index:500; display: none;}
-.site-map { padding: 0 0 0 242px; }
-.site-map ul { overflow: hidden; padding: 23px 0 25px 0; }
-.site-map li { float: left; padding: 0 23px 0 0; }
-.site-map li a { display: block; font-family: simHei; }
-.site-map h3 a { height: 27px; line-height: 27px; width: 91px; padding: 0 12px; border: 1px solid #e1e1e1; background: #f8f8f8; color: #757575; font-size: 12px; }
-.site-map h3 a:hover { background: #298bdf; border: 1px solid #298bdf; color: #fff; }
-.site-map .son-nav { padding: 10px 0 0 0; }
-.site-map .son-nav a { padding: 1px 12px; color: #979797; }
-.site-map .son-nav a:hover { text-decoration: underline; }
-.footer .wl { width: 1440px; background: url(../images/footer.gif) no-repeat; height: 116px; position: relative; }
-.footer .wl a { display: block; position: absolute; text-indent: -9999em; background: url(../images/none.png) no-repeat; }
-.footer .wl .links1 { height:45px; line-height:45px; color:#FFFFFF; font-size:11px; width:1000px; text-align:center; margin:0 auto; }
-.footer .wl .links1 li { float:left; margin:0 2px; }
-.footer .wl .links1 li a { color:#fff; font-family: Arial, "黑体"; position:relative; display:inline; text-indent:0; background:none; }
-.footer .wl .links1 li a:hover { color:#000; text-decoration:underline; }
-.footer .wl a.wl01 { width: 50px; height: 10px; left: 246px; top: 16px; }
-.footer .wl a.wl02 { width: 70px; height: 10px; left: 315px; top: 16px; }
-.footer .wl a.wl03 { width: 71px; height: 10px; left: 398px; top: 16px; }
-.footer .wl a.wl04 { width: 80px; height: 10px; left: 483px; top: 16px; }
-.footer .wl a.wl05 { width: 68px; height: 10px; left: 582px; top: 16px; }
-.footer .wl a.wl06 { width: 84px; height: 10px; left: 663px; top: 16px; }
-.footer .wl a.wl07 { width: 54px; height: 10px; left: 759px; top: 16px; }
-.footer .wl a.wl08 { width: 51px; height: 10px; left: 826px; top: 16px; }
-.footer .wl a.wl09 { width: 69px; height: 10px; left: 891px; top: 16px; }
-.footer .wl a.wl10 { width: 85px; height: 60px; left: 1112px; top: 28px; }
-ol, ul, li {
-    list-style: none;
-}
+
 
 
 .header { position: absolute; left: 50%; top: 9px; width: 960px; height: 81px; margin: 0 0 0 -480px; z-index: 1003; }

@@ -226,7 +226,7 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 .bg143{  position: absolute;   width: 100%;   height: 100%;     background: url(../images/1/flag14.png) 50% 20% no-repeat;     /* background-size: contain; */  top: -1000px;  left: -100px; transition: all 1s;}
 .bg2-11  {  position: absolute;   width: 591px;   height: 298px;   background: url(../images/2/flag2_11.png) 50% 20% no-repeat;   top: 80px;  right: 2000px; transition: all 1s;}
 .bg2-22 {  position: absolute;   width: 591px;   height: 298px;   background: url(../images/2/flag2_1.png) 50% 20% no-repeat;   top: 80px;  left: 2000px; transition: all 1s;}
-.bg2-32 {  position: absolute;   width: 466px;   height: 387px;   background: url(../images/2/flag3_1.png) 50% 20% no-repeat;   top: 122px;  left: -2000px; transition: all 1s;}
+.bg2-32 {  position: absolute;   width: 100%;   height: 100%;   background: url(../images/2/flag3_1.png) 50% 20% no-repeat;   top: 122px;  left: -2000px; transition: all 1s;}
 .bg2-33 {  position: absolute;   width: 673px;   height: 224px;   background: url(../images/2/flag3_2.png) 50% 20% no-repeat;   top: 122px;  left: -2000px; transition: all 1s;}
 .bg2-34 {
     position: absolute;
@@ -334,8 +334,8 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 
 .active .bg2-11 {/* right: 200px; */ /* opacity: 1; */ /* transition-delay: 0.7s; */}
 .active .bg2-22 {left: 200px; opacity: 1; transition-delay: 0.7s;}
-.active .bg2-32 {left: 205px; opacity: 1; transition-delay: 0.7s;}
-.active .bg2-33 {left: 300px; opacity: 1; transition-delay: 0.7s;}
+.active .bg2-32 {left: 0px; top: 0px; transition-delay: 0.7s;opacity: 1;}
+.active .bg2-33 {left: 40%; opacity: 1; transition-delay: 0.7s;}
 .active .bg2-41 {left: 300px; opacity: 1; transition-delay: 0.7s;}
 .active .bg2-31{opacity: 1;transition-delay: 0.7s;  transition-duration: 3s;}
 body .active .bg2-31_1{opacity: 0;transition-duration: 2s;transition-delay: 0.7s;}

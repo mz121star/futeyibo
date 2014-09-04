@@ -17,6 +17,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
 
         slidesNavigation: true,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+
            if(index==9){
 
                $(".section11 .covered").css({
@@ -31,8 +32,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                window.setTimeout(function(){$(".bg1111_1").animate({'top': '-2000px'},1000)},1000)
            }
 
-            if(index==14){
-                $(".footer").show(1000);
+            if(index==13){
+                $(".footer").show();
             }
             /*if(index==10){
                 var i10=100
@@ -98,8 +99,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".section13 .bg img").attr("src","images/1/slide13.jpg");
              //   $(".bg133").css("background-image","url(images/1/flag13.png)")
             }
-            if(index==14){
-                $(".footer").hide(1000);
+            if(index==13){
+                $(".footer").hide();
             }
 			if(!Modernizr.csstransitions){
 				extend.onLeave(index, nextIndex, direction);
