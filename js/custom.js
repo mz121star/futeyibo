@@ -5,13 +5,13 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
 
        var options = {
            slides: '.slide', // The name of a slide in the slidesContainer
-           swipe: true,    // Add possibility to Swipe > note that you have to include touchSwipe for this
+         //  swipe: true,    // Add possibility to Swipe > note that you have to include touchSwipe for this
            slideTracker: true, // Add a UL with list items to track the current slide
            slideTrackerID: 'slideposition', // The name of the UL that tracks the slides
            slideOnInterval: false, // Slide on interval
            interval: 9000, // Interval to slide on if slideOnInterval is enabled
            animateDuration: 1000, // Duration of an animation
-           animationEasing: 'ease', // Accepts: linear ease in out in-out snap easeOutCubic easeInOutCubic easeInCirc easeOutCirc easeInOutCirc easeInExpo easeOutExpo easeInOutExpo easeInQuad easeOutQuad easeInOutQuad easeInQuart easeOutQuart easeInOutQuart easeInQuint easeOutQuint easeInOutQuint easeInSine easeOutSine easeInOutSine easeInBack easeOutBack easeInOutBack
+        //   animationEasing: 'ease', // Accepts: linear ease in out in-out snap easeOutCubic easeInOutCubic easeInCirc easeOutCirc easeInOutCirc easeInExpo easeOutExpo easeInOutExpo easeInQuad easeOutQuad easeInOutQuad easeInQuart easeOutQuart easeInOutQuart easeInQuint easeOutQuint easeInOutQuint easeInSine easeOutSine easeInOutSine easeInBack easeOutBack easeInOutBack
            pauseOnHover: false // Pause when user hovers the slide container
        };
 
@@ -26,22 +26,14 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
            $(".slider .slide[data-index='"+newSlide+"'] .slidecontent").hide();
 
        });
-    function shake(o){
-        var $panel =o;
-        box_left = ($(window).width() -  $panel.width()) / 2;
-        for(var i=1; 4>=i; i++){
-            $panel.animate({left:box_left-(40-10*i)},50);
-            $panel.animate({left:box_left+2*(40-10*i)},50);
+
+        var added={
+            1:true,
+            2:true,
+            3:true,
+            4:true
+
         }
-
-    }
-    var added={
-        1:true,
-        2:true,
-        3:true,
-        4:true
-
-    }
        $(".slider").on("afterSliding", function(event){
 
 
@@ -56,7 +48,7 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
                speed: 0
            });
            $(".backstretch .car ",$(".slide")[newSlide]).trigger('startRumble');
-
+           setTimeout(function(){$(".backstretch .car ",$(".slide")[newSlide]).trigger('stopRumble');},1000)
 
 
            /*   var img=$("<img style='width:auto;height: 100%; margin-left: -10% ' src='images/"+(parseInt(event.newSlide)+1)+"/1_1.png' />")
@@ -92,7 +84,7 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
         speed: 0
     });
     $(".backstretch .car ",$(".slide")[0]).trigger('startRumble');
-
+    setTimeout(function(){$(".backstretch .car ",$(".slide")[0]).trigger('stopRumble');},1000)
 
 })
 
