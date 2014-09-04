@@ -38,7 +38,7 @@ define([], function () {
 		   if(index==9){
                $('.bg1111_1').css("filter","progid:DXImageTransform.Microsoft.Alpha(opacity=100)")
 				$('.bg1111').animate({opacity:0},6000);
-				$('.bg111').animate({left:'40%',opacity:1},1000);
+			//	$('.bg111').animate({left:'40%',opacity:1},1000);
 		   }
 		   if(index==10){
 				//$('.bg121').animate({left:'200px'},1000);
