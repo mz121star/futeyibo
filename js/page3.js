@@ -29,6 +29,10 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 			}
         } ,
         onLeave: function(index, nextIndex, direction){
+           if(index==1){
+                $(".tip").hide();
+
+            }
             if(index==4){
                 $(".footer").hide(1000);
             }

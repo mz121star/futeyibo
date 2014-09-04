@@ -29,13 +29,15 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				}
 			}
 			
-            if(index==4){
-                 $(".footer").show(1000);
+            if(index==5){
+                 $(".footer").show( );
             }
         } ,
         onLeave: function(index, nextIndex, direction){
             if(index==1){
                 $(".bg2-11").stop(true).animate({"right":"2000px"});
+                $(".tip").hide();
+
             }
 			
 			if(!Modernizr.csstransitions){
@@ -55,8 +57,8 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				}
 			}
 			
-            if(index==4 ){
-                $(".footer").hide(1000);
+            if(index==5 ){
+                $(".footer").hide( );
             }
         }
     });
