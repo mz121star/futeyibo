@@ -4,9 +4,10 @@ define([], function () {
 			if(index==2){
 				$('.bg21').animate({top:0,right:0},1000);
 				$('.bg23').animate({bottom:'15%'},1000);
+                setTimeout(function(){$(".bg44").animate({top: 0,right: 0},1000);},0);
 			}
 			if(index==3){
-               $(".bg31").fadeTo(1000,1);
+               $(".bg31").fadeTo(1000,1000);
 			   $(".bg32").animate({
 				opacity:1,
 				top:0,
@@ -34,6 +35,7 @@ define([], function () {
 		   if(index==8){
 				$('.bg21').animate({top:0,right:0},1000);
 				$('.bg82').animate({bottom:'260px',opacity:1,right:'100px'},1000);
+               setTimeout(function(){$(".bg44").animate({top: 0,right: 0},1000);},0);
 		   }
 		   if(index==9){
                $('.bg1111_1').css("filter","progid:DXImageTransform.Microsoft.Alpha(opacity=100)")
@@ -88,6 +90,7 @@ define([], function () {
 		   if(index==8){
 				$('.bg21').animate({top:0,right:'-800px'},1000);
 				$('.bg82').animate({bottom:'160px',opacity:0,right:'2000px'},1000);
+               setTimeout(function(){$(".bg44").animate({top: 0,'right':'-900px'},1000);},0);
 		   }
 		   if(index==9){
 				$('.bg1111').stop(true).animate({opacity:1},0);
