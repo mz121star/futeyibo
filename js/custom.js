@@ -1,4 +1,4 @@
-define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch'],function(){
+define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jrumble.1.3.min'],function(){
 
        var mainslider;
 
@@ -49,13 +49,23 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch'],function(
            var newSlide = event.newSlide;
            $(".slider .slide[data-index='"+newSlide+"'] .slidecontent").fadeIn();
 
-           var img=$("<img style='width:auto;height: 100%; margin-left: -10% ' src='images/"+(parseInt(event.newSlide)+1)+"/1_1.png' />")
-           if(added[newSlide]){
-               $(".backstretch",$(".slide")[newSlide]).append(img);
+           $(".backstretch .car ",$(".slide")[newSlide]).jrumble({
+               x:4 ,
+               y: 0,
+               rotation: 0,
+               speed: 0
+           });
+           $(".backstretch .car ",$(".slide")[newSlide]).trigger('startRumble');
 
-               added[newSlide]=false;
-           }
 
+
+           /*   var img=$("<img style='width:auto;height: 100%; margin-left: -10% ' src='images/"+(parseInt(event.newSlide)+1)+"/1_1.png' />")
+              if(added[newSlide]){
+                  $(".backstretch",$(".slide")[newSlide]).append(img);
+
+                  added[newSlide]=false;
+              }
+   */
 
            //shake(img);
        });
@@ -71,7 +81,12 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch'],function(
            $(this).css('margin-top', -$(this).height()/2);
 
        });
-    $(".backstretch",$(".slide")[0]).append("<img src='images/1/1_1.png' />")
+    $(".backstretch",$(".slide")[0]).append($("<img class='car' style='width:auto;height: 100%; margin-left: -10% ' src='images/1/1_1.png' />")) ;
+    $(".backstretch",$(".slide")[1]).append($("<img  class='car' style='width:auto;height: 100%; margin-left: -10% ' src='images/2/1_1.png' />")) ;
+    $(".backstretch",$(".slide")[2]).append($("<img  class='car' style='width:auto;height: 100%; margin-left: -10% ' src='images/3/1_1.png' />")) ;
+    $(".backstretch",$(".slide")[3]).append($("<img  class='car'  style='width:auto;height: 100%; margin-left: -10% ' src='images/4/1_1.png' />")) ;
+
+
 
 
 })

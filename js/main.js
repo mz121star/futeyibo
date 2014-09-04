@@ -24,7 +24,8 @@ require.config({
          'coveringBad':'coveringBad',
         'head':'head' ,
         'preload':'preload',
-        'jquery.easing.1.3':'jquery.easing.1.3'
+        'jquery.easing.1.3':'jquery.easing.1.3' ,
+        'jquery.jrumble.1.3.min':'jquery.jrumble.1.3.min'
     },
     shim: {
         'jquery-fullPage': {
@@ -34,6 +35,9 @@ require.config({
         'jquery.easing.1.3':{
             deps:['jquery']
         } ,
+        'jquery.jrumble.1.3.min':{
+            deps:['jquery']
+        },
         'jquery-migrate':{
             deps:['jquery']
         } ,
