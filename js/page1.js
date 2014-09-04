@@ -62,17 +62,12 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         onLeave: function(index, nextIndex, direction){
 
             if(index==1){
-                //setTimeout(function(){
-                    $(".bg13").animate({'top': '-2000px',opacity:0});
-                 setTimeout(function(){$(".bg12").css({'left': ''});},1000);
+                $(".tip").hide();
+
+                $(".bg13").animate({'top': '-2000px',opacity:0});
+                setTimeout(function(){$(".bg12").css({'left': ''});},1000);
                 setTimeout(function(){$(".bg11").css({'left': ''});},1000);
-                    //$(".bg13").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
-                //},0);
-				
-				//$(".bg13").hide("slide", { direction: "top"  }, 500, function () {
-                //});
-                //$(".bg14").hide("slide", { direction: "top"  }, 500, function () {
-                //});
+
                 setTimeout(function(){
                     $(".bg14").animate({'bottom': '-2000px' },0);
                     $(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
@@ -128,6 +123,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         return $(".bg131").is(":animated")|| $(".bg132").is(":animated") ||  $(".bg141").is(":animated") ||  $(".bg142").is(":animated");
     }
     $(".section1").mousewheel(function (e) {
+
+        $(".tip").hide();
         if (!_section1) {
             $(".bg13").animate({opacity:1});//.css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=100)')
 			$(".bg14").animate({opacity:1});
@@ -137,12 +134,26 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             $(".bg11").hide("slide", { direction: "left"  }, 2000, function () {});*/
             setTimeout(function(){$(".bg12").animate({'left': '2000px'},1000);},0);
             setTimeout(function(){$(".bg11").animate({'left': '-2000px'},1000);},0);
-                setTimeout(function(){$(".bg13").animate({'top': '50px'},1000);},0);
-                setTimeout(function(){$(".bg14").animate({'bottom': '0px'},1000);},0);
+            setTimeout(function(){$(".bg13").animate({'top': '50px'},1000);},0);
+            setTimeout(function(){$(".bg14").animate({'bottom': '0px'},1000);},0);
                 $(".bg15").show("shake", { direction: "top"  }, 1000, function () {
                     _section1 = true;
                 });
 
+            stopEvent()
+            return false;
+        }
+        if(e.deltaY>0){
+            $(".tip").hide();
+
+            $(".bg13").animate({'top': '-2000px',opacity:0});
+            setTimeout(function(){$(".bg12").css({'left': ''});},1000);
+            setTimeout(function(){$(".bg11").css({'left': ''});},1000);
+
+            setTimeout(function(){
+                $(".bg14").animate({'bottom': '-2000px' },0);
+                $(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
+            },0);
             stopEvent()
             return false;
         }
