@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+﻿/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -273,7 +273,7 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 .active .p11 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
 
 .active .bg21 { opacity: 1; margin-left: -608px; transition-delay: 0.7s; right: 0px; top: 0px;}
-.active .bg23 { bottom: 15%; transition-delay: 0.7s;}
+.active .bg23 { bottom: 15%; transition-delay: 1s;}
 .active .bg22 { margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
 
 .active .p3 { margin-left: -480px; opacity: 1; transition-delay: 0.7s;}
@@ -286,7 +286,7 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 .active .bg3-31 { bottom: 15%; transition-delay: 0.7s;opacity: 1; margin-top: 0px;}
 .active .bg3-32 { bottom: 15%; transition-delay: 0.7s;opacity: 1; margin-top: 0px;}
 .active .bg43 { bottom: 15%; transition-delay: 0.9s; z-index: 99;}
-.active .bg44 { top: 0; right: 0px; transition-delay: 1.9s;}
+.active .bg44 { top: 0; right: 0px; transition-delay: 0.5s;}
 .active .bg51 { /* margin-left: -551px; */ opacity: 1; transition-delay: 0.7s;}
 .active .bg52 { margin-left: -253px; opacity: 1; transition-delay: 0.7s;}
 .active .bg53 { margin-left: 45px; opacity: 1; transition-delay: 0.7s;}
