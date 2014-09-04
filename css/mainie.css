@@ -143,6 +143,8 @@
 .copyright a, .copyright span { margin: 0 7px; font-size: 12px; color: #a0a0a0;}*/
 
 /* CSS3过度及动画 */
+.no-csstransitions .bg111 { position: absolute;  width: 293px;  height: 156px;  background: url(../images/1/flag11_1.png) 50% 20% no-repeat;  top: 120px; right: 2000px;
+}
 
 
 /*.active strong, .active h3 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
@@ -172,7 +174,7 @@
 .no-csstransitions .active .bg51 { }
 .no-csstransitions .active .bg52 { margin-left: -253px; opacity: 1; transition-delay: 0.7s;}
 .no-csstransitions .active .bg53 { margin-left: 45px; opacity: 1; transition-delay: 0.7s;}
-.no-csstransitions .active .bg54 { margin-left: 345px; opacity: 1; transition-delay: 0.7s;}
+
 
 .no-csstransitions .active .bg61 {}
 .no-csstransitions .active .bg62 {}
@@ -193,7 +195,7 @@
 
 .active .bg102, .active .bg103 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
 .active .go { top: 25%; opacity: 1; transition-delay: 1.2s;}
-.active .bg111{right: 300px; opacity: 1; transition-delay: 0.7s;}
+.active .bg111{/*right: 300px; opacity: 1; transition-delay: 0.7s;*/}
 .active .bg1111{/* left: 300px; */ opacity: 0; transition-delay: 0.7s;transition-duration: 6s;}
 .active .bg121{left: 200px; opacity: 1; transition-delay: 0.7s;}
 .active .bg131{/* left: -200px; */ /* opacity: 1; */ /* transition-delay: 0.5s; *//* transition-duration: 3.5s; *//* top: 2000px; */}
@@ -215,8 +217,8 @@ body .active .bg2-31_1{opacity: 0;transition-duration: 2s;transition-delay: 0.7s
 .no-csstransitions .active .bg3-21 {}
 .no-csstransitions .active .bg3-33 {}
 .no-csstransitions .active .bg3-41 {}
-
-.no-csstransitions .active .bg4-1{}
+.no-csstransitions .active .bg3-11 {}
+.no-csstransitions .active .bg111{ }
 .active .bg4-21{left: 100px; opacity: 1; transition-delay: 0.7s;}
 
 .active .bg4-31{  opacity: 0;   transition-delay: 1s;  transition-duration: 4s;   }
