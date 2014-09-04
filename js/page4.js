@@ -17,6 +17,9 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                 $(".footer").show(1000);
             }
             if(!Modernizr.csstransitions){
+                if(index==1){
+                    $(".bg4-1").delay(100).animate({'opacity': 1,top:'220px',right:'40px'},1000);
+                }
                 if(index==2){
                    $(".bg71").delay(100).animate({'bottom': '250px',left:0},1000);
                     //left: 100px; opacity: 1; transition-delay: 0.7s;
@@ -49,6 +52,9 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                 $(".bg4-41").delay(1000).css({  "top":"400px","right":"450px"})*/
             }
             if(!Modernizr.csstransitions){
+                if(index==1){
+                    $(".bg4-1").animate({'opacity': 0,top:'2000px',right:'100px'});
+                }
                 if(index==2){
                     $(".bg71").animate({left:'-800px'});
                     $('.bg4-21').delay(300).animate({left:'2000px'});
@@ -85,7 +91,9 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
         }
     }
 
-
+$(function(){
+        $(".bg4-1").delay(100).animate({'opacity': 1,top:'220px',right:'40px'},1000);
+});
     // $(window).resize(function() {
 
     if(document.location.href.indexOf("?visual=1")>0){
