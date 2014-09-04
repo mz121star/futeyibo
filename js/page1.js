@@ -64,6 +64,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             if(index==1){
                 //setTimeout(function(){
                     $(".bg13").animate({'top': '-2000px',opacity:0});
+                 setTimeout(function(){$(".bg12").css({'left': ''});},1000);
+                setTimeout(function(){$(".bg11").css({'left': ''});},1000);
                     //$(".bg13").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
                 //},0);
 				
@@ -180,7 +182,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                $(".section13 .bg img").attr("src","images/1/slide14.jpg");
                $(".bg133").css("background-image","url(images/1/flag14.png)");
              //  $(".bg131").animate({'left': '0px','top': '0px'},1000);
-           $(".bg132").animate({'left': '0px','top': '0px'},0);
+               $(".bg132").animate({'left': '0px','top': '0px'},0);
 
              //  $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
 

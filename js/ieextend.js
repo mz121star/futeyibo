@@ -16,7 +16,7 @@ define([], function () {
 		   if(index==4){
 				setTimeout(function(){$(".bg41").animate({bottom: '15%','margin-top': 0},1000);},100);
 				setTimeout(function(){$(".bg42").animate({bottom: '15%',opacity: 1,'margin-top': 0},1000);},300);
-				setTimeout(function(){$(".bg43").animate({bottom: '15%',opacity: 1},1000);},100);
+				setTimeout(function(){$(".bg43").animate({bottom: '15%',opacity: 1},1000);},1000);
 				setTimeout(function(){$(".bg44").animate({top: 0,right: 0},1000);},1300);
 		   }
 		   if(index==5){
@@ -70,7 +70,7 @@ define([], function () {
 		   if(index == 4){
 				$(".bg41").animate({bottom: '0%','margin-top': '2000px'});
 				$(".bg42").animate({bottom: '200%',opacity: 0,'margin-top':'-300px'});
-				$(".bg43").animate({bottom: '-449px',opacity: 0});
+               setTimeout(function(){$(".bg43").animate({bottom: '-449px',opacity: 0})},1000);
 				$(".bg44").animate({right: '-900px'},0);		   
 		   }
 		   if(index==5){
