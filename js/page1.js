@@ -63,7 +63,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         onLeave: function(index, nextIndex, direction){
 
             if(index==1){
-                $(".tip").hide();
+                //$(".tip").hide();
 
                 $(".bg13").animate({'top': '-2000px',opacity:0});
                 setTimeout(function(){$(".bg12").css({'left': ''});},1000);
@@ -125,7 +125,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
     }
     $(".section1").mousewheel(function (e) {
 
-        $(".tip").hide();
+       // $(".tip").hide();
         if (!_section1) {
             $(".bg13").animate({opacity:1});//.css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=100)')
 			$(".bg14").animate({opacity:1});
@@ -145,7 +145,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             return false;
         }
         if(e.deltaY>0){
-            $(".tip").hide();
+           // $(".tip").hide();
 
             $(".bg13").animate({'top': '-2000px',opacity:0});
             setTimeout(function(){$(".bg12").css({'left': ''});},1000);

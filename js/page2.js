@@ -37,7 +37,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
         onLeave: function(index, nextIndex, direction){
             if(index==1){
                 $(".bg2-11").stop(true).animate({"right":"2000px"});
-                $(".tip").hide();
+              //  $(".tip").hide();
 
             }
 			
