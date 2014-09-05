@@ -1,10 +1,10 @@
 define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head','modernizr'], function () {
 
     $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage','4rdPage','5','6','7','8','9','10','11','12'],
+        anchors: ['1', '2', '3','4','5','6','7','8','9','10','11','12'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
+        //navigationTooltips: ['firstSlide', 'secondSlide'],
         slidesNavigation: true ,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
 
