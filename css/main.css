@@ -786,3 +786,5 @@ ol, ul, li {
 .loading{ width:1440px; height:640px; position:absolute; left:50%; top:0; background:url(../images/load.gif) no-repeat center center #000; z-index:888; margin:0 0 0 -720px;}
 .gray-line{background:url(../images/gray_line.gif) repeat-x center;width:230px; line-height:15px; overflow:hidden; position:absolute; z-index:1001; top:427px; left:555px; text-align:right; padding:0 0 0 32px;}
 .gray-line span{ background:#000; padding:0 0 0 3px; font-family:Arial; float:right;}
+
+.backstretch img{cursor: default;}
