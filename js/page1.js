@@ -1,5 +1,7 @@
 define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head','modernizr'], function (extend) {
      var times=1;
+      var _section1 = false;
+    var hasShow = false;
     $(function(){
         $(".section13 .bg img").attr("src","images/1/slide131.jpg");
         $(".bg131").animate({'left': '-2000px','top': '2000px'},0);
@@ -10,74 +12,35 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         $(".bg133").hide();
     })
     $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage','4rdPage','5','6','7','8','9','10','11','12'],
+        anchors: ['1', '2', '3','4','5','6','7','8','9','10','11','12'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
-
         slidesNavigation: true,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-           if(index==9){
-
-               $(".section11 .covered").css({
-                   "background-image":"url('../images/1/slide11_1.jpg')"
-               } );
-              /* $(".bg1111_1 img").css("height",$(document).height())
-               $(".bg1111_11 img").css("height",$(document).height())*/
-               //  $(".bg1111_11").css("height","100%")
-               /*  $(".bg1111_1") .css("height","0px")*/
-               //   setTimeout(function(){$(".bg1111_1").animate({'height': '200px'},1000);},0);
-               /*    setTimeout(function(){$(".bg1111_1").animate({'top': '-200px'},1000);},0);*/
-               window.setTimeout(function(){$(".bg1111_1").animate({'top': '-2000px'},1000)},1000)
-           }
-
-            if(index==14){
-                $(".footer").show(1000);
+            if(index==13){
+                $(".footer").show();
             }
-            /*if(index==10){
-                var i10=100
-               var interval= window.setInterval(function(){
-                   i10=i10-15 ;
-                   $(".bg1111").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity='+i10+')')
-                   if(i10<0){
-                       window.clearInterval(interval)
-                   }
-               },600);
-            }*/
-            //if(index==11){
-                //$(".bg121").css({'left': '0px'},0);
-            //}
             if(index==12){
+                times=1;
                 $(".bg131").animate({'left': '0px','top': '0px'},1000);
                 $(".bg132").animate({'left': '0px','top': '0px'},1000);
                 $(".bg141").animate({'left': '0px',top:'0px'},1000);
                 $(".bg142").animate({'left': '-100px','top':'0px'},1000);
-                $(".bg133").animate({'left': '-2000px'},0,function(){ });
+               $(".bg133").animate({'left': '-2000px'},0,function(){ });
+                //$(".bg133").css("background-image","url(images/1/flag135.png)")
             }
 			
-			if(!Modernizr.csstransitions){
-				extend.afterLoad(anchorLink, index, slideAnchor, slideIndex);
-			}
+      			if(!Modernizr.csstransitions){
+      				extend.afterLoad(anchorLink, index, slideAnchor, slideIndex);
+      			}
         } ,
         onLeave: function(index, nextIndex, direction){
 
             if(index==1){
-                $(".tip").hide();
-
-                $(".bg13").animate({'top': '-2000px',opacity:0});
-                setTimeout(function(){$(".bg12").css({'left': ''});},1000);
-                setTimeout(function(){$(".bg11").css({'left': ''});},1000);
-
-                setTimeout(function(){
-                    $(".bg14").animate({'bottom': '-2000px' ,opacity:0},0);
-                    //$(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
-                },0);
-            }
-            if(index==9 ){
-                $(".section11 .changeable").animate({
-                    height: '100px'
-                }, 1000 );
-                window.setTimeout(function(){$(".bg1111_1").animate({'top': '-0px'},0)},0)
+                  $(".bg13").animate({'top': '-2000px',opacity:0});
+                  $(".bg12").animate({'left': '25%'});
+                  $(".bg11").animate({'left': '-290px'});
+                  $(".bg14").animate({'bottom': '-2000px' ,opacity:0},0,function(){ _section1 = false;});
             }
             if(index==11){
 
@@ -88,7 +51,9 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".section13 .bg img").attr("src","images/1/slide131.jpg");
             }
             if(index==12){
-                times=1;
+                hasShow = false;
+                $(".footer").hide(1000,function(){$('.section13 .bg img').removeAttr('style');});
+                $(".bg133").removeAttr("style");
                 $(".bg133").show();
                 $(".bg133").animate({'left': '-2000px'},0);
                 $(".bg131").animate({'left': '0px','top': '0px'},0);
@@ -96,14 +61,13 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".bg141").animate({'left': '0px',top:'0px'},0); 
                 $(".bg142").animate({'left': '-100px','top':'0px'},0);
                 $(".section13 .bg img").attr("src","images/1/slide13.jpg");
-             //   $(".bg133").css("background-image","url(images/1/flag13.png)")
             }
-            if(index==14){
-                $(".footer").hide(1000);
+            if(index==13){
+                $(".footer").hide();
             }
-			if(!Modernizr.csstransitions){
-				extend.onLeave(index, nextIndex, direction);
-			}
+      			if(!Modernizr.csstransitions){
+      				extend.onLeave(index, nextIndex, direction);
+      			}
         }
     });
     function stopEvent(){ //阻止冒泡事件
@@ -117,21 +81,17 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             window.event.cancelBubble = true;
         }
     }
-    var _section1 = false;
+   
     var _section13 = false;
     var isanimated=function(){
         return $(".bg131").is(":animated")|| $(".bg132").is(":animated") ||  $(".bg141").is(":animated") ||  $(".bg142").is(":animated");
     }
     $(".section1").mousewheel(function (e) {
 
-        $(".tip").hide();
         if (!_section1) {
-            $(".bg13").animate({opacity:1});//.css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=100)')
-			$(".bg14").animate({opacity:1});
-            //$(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=100)')
-          /*  $(".bg12").hide("slide", { direction: "right" }, 3000, function () {});
+            $(".bg13").animate({opacity:1});
+			     $(".bg14").animate({opacity:1});
 			
-            $(".bg11").hide("slide", { direction: "left"  }, 2000, function () {});*/
             setTimeout(function(){$(".bg12").animate({'left': '2000px'},1000);},0);
             setTimeout(function(){$(".bg11").animate({'left': '-2000px'},1000);},0);
             setTimeout(function(){$(".bg13").animate({'top': '50px'},1000);},0);
@@ -140,16 +100,6 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                     _section1 = true;
                 });
 
-            stopEvent()
-            return false;
-        }
-        if(e.deltaY>0){
-            $(".tip").hide();
-
-            $(".bg13").animate({'top': '-2000px',opacity:0});
-            setTimeout(function(){$(".bg12").css({'left': ''});},1000);
-            setTimeout(function(){$(".bg11").css({'left': ''});},1000);
-            $(".bg14").animate({'bottom': '-2000px' ,opacity:0},0);
             stopEvent()
             return false;
         }
@@ -173,30 +123,11 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 return false;
 
             }
-           if(times==2){                   //全部飞入遮挡住
-               $(".bg131").animate({'left': '0px','top': '0px'},1000);
-               $(".bg132").animate({'left': '0px','top': '0px'},0);
-
-               $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
-               $(".bg133").animate({'left': '-2000px','top': '2000px'},1000);
-               $(".bg141").animate({'left': '-200px','top': '2000px'},1000);
-           $(".bg141").animate({'left': '0px','top':'0px'},0,function(){times++;$(".section13 .bg img").attr("src","images/1/slide13.jpg");});
-
-               stopEvent()
-               return false;
-           }
            if(times==3){          //再次飞出，展现双孔杯架
                $(".bg133").animate({'left': '-2000px' },0);
                $(".section13 .bg img").attr("src","images/1/slide14.jpg");
                $(".bg133").css("background-image","url(images/1/flag14.png)");
-             //  $(".bg131").animate({'left': '0px','top': '0px'},1000);
                $(".bg132").animate({'left': '0px','top': '0px'},0);
-
-             //  $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
-
-
-
-            //   $(".bg131").animate({'left': '0px','top': '0px'},500);
                $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
                $(".bg141").animate({'left': '2000px','top': '-2000px'},1000);
                $(".bg133").animate({'left': '100px'},1000,function(){times++;});
@@ -205,34 +136,22 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                return false;
 
            }
-         if(times==4){    //再次飞入遮挡
-
-             $(".bg133").animate({'left': '-2000px'},0);
-            //$(".bg131").animate({'left': '0px','top': '0px'},1000);
-             $(".bg132").animate({'left': '0px','top': '0px'},1000);
-             $(".bg141").animate({'left': '0px',top:'0px'},1000,function(){times++;$(".bg142").animate({'left': '-82px','top':'0'},0);}); 
-			 
-                
-             stopEvent()
-             return false;
-           }
            if(times==5){    //再次飞出展现迷你小冰箱
                $(".bg133").animate({'left': '-2000px'},0);
-               //$(".bg131").animate({'left': '0px','top': '0px'},1000);
                $(".bg132").animate({'left': '0px','top': '0px'},0);
                $(".bg141").animate({'left': '0px',top:'0px'},0,function(){times++;$(".bg142").animate({'left': '-82px','top':'0'},0);});
 
 
                $(".section13 .bg img").attr("src","images/1/slide15.jpg");
                $(".bg133").css("background-image","url(images/1/flag15.png)")
-               $(".bg133").animate({'left': '100px'},1000); 
+               $(".bg133").animate({'left': '100px'},1000);
 
                $(".bg131").animate({'left': '0px','top': '0px'},0);
                $(".bg132").animate({'left': '0px','top': '0px'},0);
                $(".bg141").animate({'left': '-2000px','top': '2000px'},1000);
                $(".bg142").animate({'left': '2000px','top':'-2000px'},1000,function(){ });
 
-               
+
                stopEvent()
                return false;
            }
@@ -250,36 +169,18 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                stopEvent()
                return false;
            }
-         /*  if(times==7){    //再次飞出展现迷你小冰箱
-               $(".bg133").css("background-image","url(images/1/flag16.png)")
-               $(".bg133").animate({'left': '100px'},500);
-
-               $(".bg131").animate({'left': '0px','top': '0px'},1000);
-               $(".bg132").animate({'left': '0px','top': '0px'},1000);
-               $(".bg141").animate({'left': '-200px','top': '2000px'},1000);
-               $(".bg142").animate({'left': '900px','top':'-2000px'},1000,function(){times++;$(".section13 .bg img").attr("src","images/1/slide16.jpg");});
-
-               
-               stopEvent()
-               return false;
-           }*/
-           else{
-
+           if(times==8){
+               if(e.deltaY < 0 && !hasShow){
+                   hasShow=true;
+                   $(".footer").show(1000);
+                   var bg = $('.section13 .bg img');
+                   bg.height(bg.height()-360);
+                   stopEvent()
+                   return false;
+               }
            }
-
        }
    });
-    $(".section2").on("mouseover",function (e) {
-
-        _section1 = false;
-            $(".bg12").show("slide", { direction: "right" }, 3000, function () {
-            });
-            $(".bg11").show("slide", { direction: "left"  }, 2000, function () {
-
-            });
-
-
-    }) ;
 
 
     $('.first').coveringBad({
@@ -290,11 +191,6 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         direction   : "vertical"
     });
 
-
-
-
-    // $(window).resize(function() {
-        //console.log($(".standard").height()+"px")
     if(document.location.href.indexOf("?visual=1")>0){
 
          $(".section .bg img").css({width:'100%',height:'auto'})
@@ -303,6 +199,4 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         $(".fp-tableCell").css("height",$(".standard").height()+"px")
 
     }
-
-   // });
-})
+});
