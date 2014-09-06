@@ -20,8 +20,10 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
        /* yes, that's all! */
 
        $(".slider").on("beforeSliding", function(event){
+
            var prevSlide = event.prevSlide;
            var newSlide = event.newSlide;
+           $("#logoimg").attr("src","images/"+(newSlide+1)+"/1_1_1.png");
            $(".slider .slide[data-index='"+prevSlide+"'] .slidecontent").fadeOut();
            $(".slider .slide[data-index='"+newSlide+"'] .slidecontent").hide();
 
@@ -47,6 +49,7 @@ define(['jquery', 'transit','touchSwipe','simpleSlider','backstretch','jquery.jr
                rotation: 0,
                speed: 0
            });
+
            $(".backstretch .car ",$(".slide")[newSlide]).trigger('startRumble');
            setTimeout(function(){$(".backstretch .car ",$(".slide")[newSlide]).trigger('stopRumble');},1000)
 

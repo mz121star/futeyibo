@@ -37,6 +37,17 @@ $(function($) {
 
     });
 
+    nav.on( 'mouseleave','li', function(evt) {
+        var target = $(evt.currentTarget),
+            sub = $('.sub_nav', target);
+        switch (evt.type) {
+            case 'mouseleave':
+                sub.hide();
+                break;
+        }
+        return false;
+    });
+
     nav.on( 'mouseenter','li', function(evt) {
         var target = $(evt.currentTarget),
             sub = $('.sub_nav', target);
