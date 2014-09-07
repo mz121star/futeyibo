@@ -3,6 +3,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
       var _section1 = false;
     var hasShow = false;
     $(function(){
+        $('.tiploading').remove();
         $(".section13 .bg img").attr("src","images/1/slide131.jpg");
         $(".bg131").animate({'left': '-2000px','top': '2000px'},0);
         $(".bg132").animate({'left': '2000px','top': '-2000px'},0);
@@ -10,7 +11,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         $(".bg142").animate({'left': '2000px','top': '-2000px'},0);
         $(".section13 .bg img").attr("src","images/1/slide131.jpg");
         $(".bg133").hide();
-    })
+    });
     $('#fullpage').fullpage({
         anchors: ['1', '2', '3','4','5','6','7','8','9','10','11','12'],
         navigation: true,
@@ -52,7 +53,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             }
             if(index==12){
                 hasShow = false;
-                $(".footer").hide(1000,function(){$('.section13 .bg img').removeAttr('style');});
+                $('.tip').show();
+                $(".footer").hide(1000,function(){$('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img').removeAttr('style');});
                 $(".bg133").removeAttr("style");
                 $(".bg133").show();
                 $(".bg133").animate({'left': '-2000px'},0);
@@ -94,7 +96,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
 			
             setTimeout(function(){$(".bg12").animate({'left': '2000px'},1000);},0);
             setTimeout(function(){$(".bg11").animate({'left': '-2000px'},1000);},0);
-            setTimeout(function(){$(".bg13").animate({'top': '50px'},1000);},0);
+            setTimeout(function(){$(".bg13").animate({'top': '100px'},1000);},0);
             setTimeout(function(){$(".bg14").animate({'bottom': '0px'},1000);},0);
                 $(".bg15").show("shake", { direction: "top"  }, 1000, function () {
                     _section1 = true;
@@ -173,8 +175,10 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                if(e.deltaY < 0 && !hasShow){
                    hasShow=true;
                    $(".footer").show(1000);
-                   var bg = $('.section13 .bg img');
-                   bg.height(bg.height()-360);
+                   var bg = $('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img');
+                   bg.animate({'top':'-360px'},500).css({'position':'absolute'});
+                   $(".footer").delay(100).show(1000);
+                   $('.tip').hide();
                    stopEvent()
                    return false;
                }

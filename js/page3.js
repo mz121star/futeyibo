@@ -1,5 +1,8 @@
 define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head','modernizr'], function () {
     var hasShow = false;
+    $(function(){
+        $('.tiploading').remove();
+    });
     $('#fullpage').fullpage({
         anchors: ['1', '2', '3','4','5','6','7','8','9','10','11','12'],
         navigation: true,
@@ -28,6 +31,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             if(index==4){
                 hasShow = false;
                 $(".footer").hide(1000,function(){$('.section4 .bg img').removeAttr('style');});
+                $('.tip').show();
             }
 			if(!Modernizr.csstransitions){
 				if(index==2){
@@ -64,11 +68,11 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 
             $(".bg3-12").animate({
                 left: '100px'
-            },1000 );
+            },300 );
             $(".bg3-11").animate({
                 left: '100px'
-            }, 1000 );
-            $(".bg3-13").delay(10).animate({"opacity":"1"},1000, 'easeInCirc',function(){
+            }, 300 );
+            $(".bg3-13").animate({"opacity":"1"},800,function(){
                 _section1 = true;
             })
             stopEvent();
@@ -81,7 +85,9 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             hasShow=true;
             $(".footer").show(1000);
             var bg = $('.section4 .bg img');
-            bg.height(bg.height()-360);
+            bg.animate({'top':'-360px'},500).css({'position':'absolute'});
+            $(".footer").delay(100).show(1000);
+            $('.tip').hide();
             stopEvent();
             return false;
         }

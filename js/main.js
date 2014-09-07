@@ -1,6 +1,6 @@
 require.config({
     baseUrl: 'js',
-	waitSeconds:50,
+	waitSeconds:100,
     paths: {
         // the left side is the module ID,
         // the right side is the path to
@@ -25,7 +25,8 @@ require.config({
         'head':'head' ,
         'preload':'preload',
         'jquery.easing.1.3':'jquery.easing.1.3' ,
-        'jquery.jrumble.1.3.min':'jquery.jrumble.1.3.min'
+        'jquery.jrumble.1.3.min':'jquery.jrumble.1.3.min',
+        'spin':'vendor/spin.min'
     },
     shim: {
         'jquery-fullPage': {
@@ -69,6 +70,9 @@ require.config({
             deps:['jquery']
         },
         'preload' :{
+            deps:['jquery']
+        },
+        'spin':{
             deps:['jquery']
         }
 

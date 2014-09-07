@@ -59,10 +59,9 @@ $(function($) {
                 clearTimeout(outItv);
                 var left = target.prop('offsetLeft');
                 left = left>0?left-12:left;
-
                 hoverLi.stop(true).animate({
                     left: left
-                }, 'slow', 'easeOutBounce');
+                }, 'slow');
                 //更换滑动块背景
                 if(hoverLi.hasClass('last')){
                     setTimeout(function(){

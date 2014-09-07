@@ -37,6 +37,7 @@ var hasShow = false;
             if(index==4){
                 hasShow = false;
                 $(".footer").hide(1000,function(){$('.section4 .bg img').removeAttr('style');});
+                $('.tip').show();
             }
 			
 			if(!Modernizr.csstransitions){
@@ -66,10 +67,12 @@ var hasShow = false;
 
         if(e.deltaY < 0 && !hasShow){
             hasShow=true;
-            $(".footer").show(1000);
+
             var bg = $('.section4 .bg img');
-            bg.height(bg.height()-360);
-            stopEvent()
+            bg.animate({'top':'-360px'},500).css({'position':'absolute'});
+            $(".footer").delay(100).show(1000);
+            $('.tip').hide();
+            stopEvent();
             return false;
         }
     });
@@ -87,6 +90,7 @@ var hasShow = false;
     }
 
       $(function(){
+          $('.tiploading').remove();
           $(".bg2-11").delay(100).animate({"right":"200px"},1000,function(){});
       })
     // $(window).resize(function() {

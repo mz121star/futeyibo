@@ -146,7 +146,7 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 .section9 h3 { width: 609px; margin-left: -304px; background-image: url(../images/t9.png);}
 .section9 h3 span { position: absolute; left: -100px; top: -48px; width: 89px; height: 90px; background-image: url(../images/yixin.png);}
 
-.bg31 { position: absolute; left: 50%; top: 10%; width: 575px; height: 199px; margin-left: -396px; margin-bottom: 80px; background-image: url(../images/1/flag5.png); opacity: 0; transition: all 1s; z-index: 99;}
+.bg31 { position: absolute; left: 50%; top: 15%; width: 575px; height: 199px; margin-left: -396px; margin-bottom: 80px; background-image: url(../images/1/flag5.png); opacity: 0; transition: all 1s; z-index: 99;}
 .bg32 { position: absolute; /* left: 50%; */ /* bottom: 0; */ width: 630px; height: 630px; /* margin-left: -396px; */ background: url(../images/1/flag6.png) 50% bottom no-repeat; opacity: 0; transition: all 1s; left: -800px;}
 .bg33 { position: absolute; left: 50%; bottom: 0; width: 441px; height: 380px; margin-left: 50%; background: url(../images/bg33.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
 .p3 { position: absolute; width: 430px; left: 50%; top: 15%; margin-top: 250px; margin-left: -100%; font-size: 16px; color: #FFFDE1; opacity: 0; transition: all 1s;}
@@ -209,8 +209,8 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 .bg102 { position: absolute; width: 100%; top: 25%; height: 79px; background: url(../images/bg102.png) 50% 0 no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
 .bg103 { position: absolute; width: 100%; top: 25%; height: 37px; margin-top: 110px; background: url(../images/bg103.png) 50% 0 no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
 .go { position: absolute; left: 50%; top: 55%; width: 254px; height: 70px; margin-top: 220px; margin-left: -127px; text-indent: -9999px; background-image: url(../images/btn.png); opacity: 0; transition: all 1s;}
-.bg111{  position: absolute;   width: 500px;   height: 241px; background: url(../images/1/flag11_1.png) 50% 20% no-repeat;   top: 60px;  right: 2000px; transition: all 1s;}
-.bg121{  position: absolute;   width: 759px;   height: 194px;   background: url(../images/1/flag12_1.png) 50% 20% no-repeat;   top: 80px;  left: -900px; transition: all 1s;}
+.bg111{  position: absolute;   width: 500px;   height: 241px; background: url(../images/1/flag11_1.png) 50% 20% no-repeat;   top: 100px;  right: 2000px; transition: all 1s;}
+.bg121{  position: absolute;   width: 759px;   height: 194px;   background: url(../images/1/flag12_1.png) 50% 20% no-repeat;   top: 100px;  left: -900px; transition: all 1s;}
 
 .bg131{  position: absolute;   width: 100%;   height: 100%;   /* background: url(../images/1/flag_131.png) 50% 20% no-repeat; */   /* background-size: cover; */  top: 0px;  left: 0px;   /* transition: all 1s; */}
 .bg132{  position: absolute;   width: 100%;   height: 100%;   /* background: url(../images/1/flag_132.png) 50% 20% no-repeat; */   /* background-size: contain; */  top: 0px;  /* left: -100px; */   /* transition: all 1s; */}
@@ -226,7 +226,7 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 .bg142 img{width: auto;  height: 100%;  padding-left: 6%;}
 .bg143{  position: absolute;   width: 100%;   height: 100%;     background: url(../images/1/flag14.png) 50% 20% no-repeat;     /* background-size: contain; */  top: -1000px;  left: -100px; transition: all 1s;}
 .bg2-11  {  position: absolute;   width: 591px;   height: 298px;   background: url(../images/2/flag2_11.png) 50% 20% no-repeat;   top: 80px;  right: 2000px; }
-.bg2-22 {  position: absolute;   width: 591px;   height: 298px;   background: url(../images/2/flag2_1.png) 50% 20% no-repeat;   top: 80px;  left: 2000px; transition: all 1s;}
+.bg2-22 {  position: absolute;   width: 591px;   height: 298px;   background: url(../images/2/flag2_1.png) 50% 20% no-repeat;   top: 100px;  left: 2000px; transition: all 1s;}
 .bg2-32 {  position: absolute;   width: 100%;   height: 100%;   background: url(../images/2/flag3_1.png) 50% 20% no-repeat;   top: 122px;  left: -2000px; transition: all 1s;}
 .bg2-33 {  position: absolute;   width: 673px;   height: 224px;   background: url(../images/2/flag3_2.png) 50% 20% no-repeat;   top: 122px;  left: -2000px; transition: all 1s;}
 .bg2-34 {
@@ -244,7 +244,7 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 
 .bg3-11 {  position: absolute;   width: 594px;   height: 691px;   background: url(../images/3/flag1_1.png) 50% 20% no-repeat;   bottom: 0px;  left: -2000px; transition: all 1s;}
 .bg3-12 {  position: absolute;   width: 286px;   height: 255px;   background: url(../images/3/flag1_2.png) 50% 20% no-repeat;   top: 122px;  left: 2000px; transition: all 1s;}
-.bg3-13 {  position: absolute;   width: 283px;   height: 477px;   background: url(../images/3/flag1_3.png) 50% 20% no-repeat;   top: 0px;  left: 600px; transition: all 1s;  opacity: 0;}
+.bg3-13 {  position: absolute;   width: 283px;   height: 477px;   background: url(../images/3/flag1_3.png) 50% 20% no-repeat;   top: 0px;  left: 600px;  opacity: 0;}
 .bg3-14 {  position: absolute;   width: 830px;   height: 425px;   background: url(../images/3/flag1_4.png) 50% 20% no-repeat;   top: 200px;  left: 500px; transition: all 1s;  opacity: 1;}
 
 .bg3-21 {  position: absolute;   width: 539px;   height: 288px;   background: url(../images/3/flag2_1.png) 50% 20% no-repeat;   top: 200px;  right: 2000px; transition: all 1s;  opacity: 1;}
@@ -505,7 +505,7 @@ body{
 }
 .section .bg img {
     display: block;
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 

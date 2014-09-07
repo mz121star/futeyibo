@@ -32,7 +32,7 @@
 .section9 h3 { width: 609px; margin-left: -304px; background-image: url(../images/t9.png);}
 .section9 h3 span { position: absolute; left: -100px; top: -48px; width: 89px; height: 90px; background-image: url(../images/yixin.png);}*/
 
-.no-csstransitions .bg31 {/* filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);*/ position: absolute; left: 50%; top: 10%; width: 575px; height: 199px; margin-left: -396px; margin-bottom: 80px; background-image: url(../images/1/flag5.png); opacity: 0;  z-index: 99;}
+.no-csstransitions .bg31 {/* filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);*/ position: absolute; left: 50%; top: 15%; width: 575px; height: 199px; margin-left: -396px; margin-bottom: 80px; background-image: url(../images/1/flag5.png); opacity: 0;  z-index: 99;}
 .no-csstransitions .bg32 {/* filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); */position: absolute; /* left: 50%; */ /* bottom: 0; */ width: 630px; height: 630px; /* margin-left: -396px; */ background: url(../images/1/flag6.png) 50% bottom no-repeat; opacity: 0; left: -800px;}
 /*.bg33 { position: absolute; left: 50%; bottom: 0; width: 441px; height: 380px; margin-left: 50%; background: url(../images/bg33.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
 .p3 { position: absolute; width: 430px; left: 50%; top: 15%; margin-top: 250px; margin-left: -100%; font-size: 16px; color: #FFFDE1; opacity: 0; transition: all 1s;}
@@ -99,7 +99,7 @@
 .no-csstransitions .go { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); position: absolute; left: 50%; top: 55%; width: 254px; height: 70px; margin-top: 220px; margin-left: -127px; text-indent: -9999px; background-image: url(../images/btn.png); opacity: 0; transition: all 1s;}
 /*.bg111{  position: absolute;   width: 293px;   height: 156px; background: url(../images/1/flag11_1.png) 50% 20% no-repeat;   top: 120px;  left: -900px; transition: all 1s;}
 */
-.no-csstransitions .bg121{  position: absolute;   width: 759px;   height: 194px;   background: url(../images/1/flag12_1.png) 50% 20% no-repeat;   top: 80px;  left: -900px; }
+.no-csstransitions .bg121{  position: absolute;   width: 759px;   height: 194px;   background: url(../images/1/flag12_1.png) 50% 20% no-repeat;   top: 100px;  left: -900px; }
 
 .bg131{  position: absolute;   width: 100%;   height: 100%;   /* background: url(../images/1/flag_131.png) 50% 20% no-repeat; */   /* background-size: cover; */  top: 0px;  left: 0px;   /* transition: all 1s; */}
 .bg132{  position: absolute;   width: 100%;   height: 100%;   /* background: url(../images/1/flag_132.png) 50% 20% no-repeat; */   /* background-size: contain; */  top: 0px;  /* left: -100px; */   /* transition: all 1s; */}
@@ -146,7 +146,7 @@
 .copyright a, .copyright span { margin: 0 7px; font-size: 12px; color: #a0a0a0;}*/
 
 /* CSS3过度及动画 */
-.no-csstransitions .bg111 { position: absolute;  width: 500px;  height: 241px;  background: url(../images/1/flag11_1.png) 50% 20% no-repeat;  top: 60px; right: 2000px;
+.no-csstransitions .bg111 { position: absolute;  width: 500px;  height: 241px;  background: url(../images/1/flag11_1.png) 50% 20% no-repeat;  top: 100px; right: 2000px;
 }
 
 

@@ -53,6 +53,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             if(index==6){
                 hasShow = false;
                 $(".footer").hide(1000,function(){$('.section6 .bg img').removeAttr('style');});
+                $('.tip').show();
             }
             if(index==4){
                 $(".bg4-42").animate({'top': '150px',left:'2000px'});
@@ -89,7 +90,9 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             hasShow=true;
             $(".footer").show(1000);
             var bg = $('.section6 .bg img');
-            bg.height(bg.height()-360);
+            bg.animate({'top':'-360px'},500).css({'position':'absolute'});
+            $(".footer").delay(100).show(1000);
+            $('.tip').hide();
             stopEvent();
             return false;
         }
@@ -107,6 +110,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
     }
 
 $(function(){
+        $('.tiploading').remove();
         $(".bg4-1").delay(100).animate({'opacity': 1,top:'220px',right:'100px'},1000);
 });
     // $(window).resize(function() {
