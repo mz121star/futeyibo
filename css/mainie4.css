@@ -369,16 +369,16 @@ body .active .bg2-31_1{opacity: 0;transition-duration: 2s;transition-delay: 0.7s
 /*
 修复拉伸问题！
 
-*/
+
 body{
     min-width: 1200px;
 }
 .section .bg img {
     display: block;
-    width: auto;
+    width: 100%;
     height: 100%;
 }
-
+*/
 
 
 
