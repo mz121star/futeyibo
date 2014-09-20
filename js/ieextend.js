@@ -38,7 +38,8 @@ define([], function () {
                //setTimeout(function(){$(".bg44").animate({top: 0,right: 0},1000);},0);
 		   }
 
-		   if(index==10){
+
+            if(index==10){
 				//$('.bg121').animate({left:'200px'},1000);
 				$('.bg1111').animate({opacity:0},6000);
 				$('.bg111').animate({right:'350px',opacity:1},1000);

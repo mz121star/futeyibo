@@ -61,7 +61,7 @@ $(function($) {
                 left = left>0?left-12:left;
                 hoverLi.stop(true).animate({
                     left: left
-                }, 'slow');
+                }, 'slow','easeOutBounce');
                 //更换滑动块背景
                 if(hoverLi.hasClass('last')){
                     setTimeout(function(){
@@ -95,6 +95,11 @@ $(function($) {
         }
         return false;
     });
+
+    setTimeout(function(){
+        var left = $('.header-nav li.on').prop('offsetLeft');
+        left = left>0?left-12:left;
+    },100);
 
     $.bind('nav.public', function(evt, index) {
         curNav = $('li', nav).eq(index);
