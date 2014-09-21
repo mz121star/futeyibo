@@ -94,7 +94,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             $(".footer").show(1000);
             var bg = $('.section4 .bg img');
             bg.animate({'top':'-360px'},500).css({'position':'absolute'});
-            $(".footer").delay(100).show(1000);
+            $(".footer").delay(100).show(100);
             $('.tip').hide();
             stopEvent();
             return false;

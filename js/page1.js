@@ -204,7 +204,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                     //$(".footer").show(1000);
                     var bg = $('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img');
                     bg.animate({'top':'-360px'},500).css({'position':'absolute'});
-                    $(".footer").delay(100).show(1000);
+                    $(".footer").delay(100).show(100);
                     $('.tip').hide();
                     stopEvent();
                     return false;
