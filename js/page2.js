@@ -7,9 +7,9 @@ var hasShow = false;
         //navigationTooltips: ['firstSlide', 'secondSlide'],
         slidesNavigation: true ,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-
+            $('.tip').show();
             if(index==1){
-                $(".bg2-11").animate({"right":"200px"},1000,function(){});
+                $(".bg2-11").animate({"right":"0px"},1000,function(){});
             }
 			
 			if(!Modernizr.csstransitions){
@@ -31,12 +31,15 @@ var hasShow = false;
 			}
         } ,
         onLeave: function(index, nextIndex, direction){
+            $('.tip').hide();
             if(index==1){
                 $(".bg2-11").stop(true).animate({"right":"2000px"});
             }
             if(index==4){
                 hasShow = false;
-                $(".footer").hide(1000,function(){$('.section4 .bg img').removeAttr('style');});
+                $('.bg2-41').animate({'top':'+=360px'},0);
+                $(".footer").hide(1000,function(){});
+                $('.section4 .bg img').removeAttr('style');
                 $('.tip').show();
             }
 			
@@ -67,7 +70,8 @@ var hasShow = false;
 
         if(e.deltaY < 0 && !hasShow){
             hasShow=true;
-
+            var bg241 = $('.bg2-41');
+            bg241.animate({'top':'-=360px'},0);
             var bg = $('.section4 .bg img');
             bg.animate({'top':'-360px'},500).css({'position':'absolute'});
             $(".footer").delay(100).show(1000);
@@ -92,7 +96,7 @@ var hasShow = false;
       $(function(){
           $('.standard').trigger('fitbg');
           $('.tiploading').remove();
-          $(".bg2-11").delay(100).animate({"right":"200px"},1000,function(){});
+          $(".bg2-11").delay(100).animate({"right":"0px"},1000,function(){});
       })
 
  /*   window.onresize=function(){
@@ -107,7 +111,7 @@ var hasShow = false;
     if(document.location.href.indexOf("?visual=1")>0){
 
         $(".section .bg img").css({width:'100%',height:'auto'})
-        $("body").css({'min-width':'200px' })
+        $("body").css({'min-width':'200px' });
         $(".section").css("height",$(".standard").height()+"px")
         $(".fp-tableCell").css("height",$(".standard").height()+"px")
 

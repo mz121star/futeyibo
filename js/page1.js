@@ -19,6 +19,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         navigationPosition: 'right',
         slidesNavigation: true,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+            $('.tip').show();
             if(index==13){
                 $(".footer").show();
             }
@@ -44,7 +45,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             }
         } ,
         onLeave: function(index, nextIndex, direction){
-
+            $('.tip').hide();
             if(index==1){
                 $(".bg13").animate({'top': '-2000px',opacity:0});
                 $(".bg12").animate({'left': '25%'});
@@ -76,7 +77,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             if(index==12){
                 hasShow = false;
                 $('.tip').show();
-                $(".footer").hide(1000,function(){$('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img').removeAttr('style');});
+                $(".footer").hide(1000,function(){});
+                $('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img').removeAttr('style');
                 $(".bg133").removeAttr("style");
                 $(".bg133").show();
                 $(".bg133").animate({'left': '-2000px'},0);
@@ -85,6 +87,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".bg141").animate({'left': '0px',top:'0px'},0);
                 $(".bg142").animate({'left': '-100px','top':'0px'},0);
                 $(".section13 .bg img").attr("src","images/1/slide13.jpg");
+
+                $('.bg133').animate({'top':'+=360px'},0);
             }
             if(index==13){
                 $(".footer").hide();
@@ -196,12 +200,13 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             if(times==8){
                 if(e.deltaY < 0 && !hasShow){
                     hasShow=true;
-                    $(".footer").show(1000);
+                    $('.bg133').delay(500).animate({'top':'-=360px'});
+                    //$(".footer").show(1000);
                     var bg = $('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img');
                     bg.animate({'top':'-360px'},500).css({'position':'absolute'});
                     $(".footer").delay(100).show(1000);
                     $('.tip').hide();
-                    stopEvent()
+                    stopEvent();
                     return false;
                 }
             }

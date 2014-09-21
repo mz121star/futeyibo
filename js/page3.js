@@ -14,7 +14,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
         //navigationTooltips: ['firstSlide', 'secondSlide'],
         slidesNavigation: true       ,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-
+            $('.tip').show();
 			if(!Modernizr.csstransitions){
 				if(index==2){
 					$('.bg21').animate({top:0,right:0},1000);
@@ -32,9 +32,12 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 			}
         } ,
         onLeave: function(index, nextIndex, direction){
+            $('.tip').hide();
             if(index==4){
                 hasShow = false;
-                $(".footer").hide(1000,function(){$('.section4 .bg img').removeAttr('style');});
+                $('.bg3-41').animate({'top':'+=360px'},0);
+                $(".footer").hide(1000,function(){});
+                $('.section4 .bg img').removeAttr('style');
                 $('.tip').show();
             }
 			if(!Modernizr.csstransitions){
@@ -87,6 +90,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
     $(".section4").mousewheel(function (e) {
         if(e.deltaY < 0 && !hasShow){
             hasShow=true;
+            $('.bg3-41').animate({'top':'-=360px'},0);
             $(".footer").show(1000);
             var bg = $('.section4 .bg img');
             bg.animate({'top':'-360px'},500).css({'position':'absolute'});
