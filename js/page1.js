@@ -23,6 +23,10 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             if(index==13){
                 $(".footer").show();
             }
+            if(index==6){
+                s6=0;
+                $(".bg61").animate({opacity: 1,'margin-top': "0%"},0);
+            }
             if(index==12){
                 times=1;
                 $(".bg131").animate({'left': '0px','top': '0px'},1000);
@@ -51,6 +55,10 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".bg12").animate({'left': '25%'});
                 $(".bg11").animate({'left': '-290px'});
                 $(".bg14").animate({'bottom': '-2000px' ,opacity:0},0,function(){ _section1 = false;});
+            }
+            if(index==6){
+                s6=0;
+                $(".bg61").animate({opacity: 1,'margin-top': "0%"},0);
             }
             if(index==11){
 
@@ -114,6 +122,32 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
     var isanimated=function(){
         return $(".bg131").is(":animated")|| $(".bg132").is(":animated") ||  $(".bg141").is(":animated") ||  $(".bg142").is(":animated");
     }
+    var s6=10;
+    $(".section6") .mousewheel(function (e) {
+        console.log(s6)
+        if(e.deltaY<0){     //往下滚动
+            s6=s6+2
+            if(s6<60){
+                $(".bg61").animate({opacity: 1,'margin-top': s6+"%"},0);
+                stopEvent()
+                return false;
+            }
+        }
+        if(e.deltaY>0){   //往上滚动
+            s6=s6-2
+            if(s6>0){
+                $(".bg61").animate({opacity: 1,'margin-top': s6+"%"},0);
+                stopEvent()
+                return false;
+            }
+        }
+        s6=0;
+        $(".bg61").animate({opacity: 1,'margin-top': "0%"},0);
+
+
+
+
+    });
     $(".section1").mousewheel(function (e) {
 
         if (!_section1) {

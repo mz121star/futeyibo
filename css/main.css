@@ -176,8 +176,8 @@ body { font: 16px/1.8 "Microsoft Yahei",verdana;}
 .bg53 { margin-left: 195px; background: url(../images/bg53.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
 .bg54 { margin-left: 645px; background: url(../images/bg54.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
 
-.bg61 { position: absolute; top: 0px; width: 100%; height: 100%; /* background: url(../images/1/slide6_1.jpg) 50% 0 no-repeat;  transition: all 3s;*/ opacity: 1; margin-top: 0%; border-top: 8px solid #fff;}
-.bg61 img{width: 100%;height: 100%}
+.bg61 { position: absolute; top: 0px; width: auto; height: 100%; /* background: url(../images/1/slide6_1.jpg) 50% 0 no-repeat;  transition: all 3s;*/ opacity: 1; margin-top: 0%; border-top: 8px solid #fff;}
+.bg61 img{width: auto;height: 100%}
 .bg62 { position: absolute; left: -30%; top: 40%; width: 832px; height: 168px; margin-left: -507px;z-index: 99; background-image: url(../images/1/flag9.png); transition: all 1s;}
 .txt6 { position: absolute; left: 90%; bottom: 20%; width: 447px; margin-left: 90px; opacity: 0; transition: all 1s;}
 .txt6 p { margin-bottom: 17px; color: #5C7970;}
@@ -304,7 +304,7 @@ body .section  .bg2-31_1{opacity: 1;transition-duration: 2s;  transition-delay: 
 .active .bg54 { margin-left: 345px; opacity: 1; transition-delay: 0.7s;}
 
 /*.active .bg61 { *//* top: 0; *//* transition-delay: 1s; opacity: 1; margin-top: 43%; transition-duration: 1s;}*/
-.active .bg62 { left: 70%; opacity: 1; transition-delay: 2.7s;}
+.active .bg62 { left: 70%; opacity: 1; transition-delay: 0.7s;}
 .active .txt6 { left: 50%; opacity: 1; transition-delay: 0.7s;}
 
 .active .bg71 { bottom: 250px; opacity: 1; transition-delay: 0.7s; left: 0px;}
