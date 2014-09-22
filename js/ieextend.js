@@ -24,7 +24,7 @@ define([], function () {
 				$(".bg51").fadeTo(1000,1);
 		   }
 		   if(index==6){
-				setTimeout(function(){$(".bg61").animate({opacity: 1,'margin-top': '43%'},1000);},300);
+				/*setTimeout(function(){$(".bg61").animate({opacity: 1,'margin-top': '43%'},1000);},300);*/
 				setTimeout(function(){$(".bg62").animate({left: '70%',opacity: 1},1000);},1900);
 				setTimeout(function(){$(".bg44").animate({top: 0,right: 0},1000);},1100);
 		   }
