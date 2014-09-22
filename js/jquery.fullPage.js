@@ -1,5 +1,5 @@
 /**
- * fullPage 2.1.9
+ * fullPage 2.2.5
  * https://github.com/alvarotrigo/fullPage.js
  * MIT licensed
  *
@@ -81,8 +81,8 @@
 
 			}else{
 				$('html, body').css({
-					'overflow' : 'auto',
-					'height' : 'auto'
+					'overflow' : 'visible',
+					'height' : 'initial'
 				});
 
 				silentScroll(0);
@@ -135,6 +135,7 @@
 		var slideMoving = false;
 
 		var isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|Windows Phone|Tizen|Bada)/);
+		var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 		var container = $(this);
 		var windowsHeight = $(window).height();
 		var isMoving = false;
@@ -247,24 +248,25 @@
 				}
 
 				slides.each(function(index) {
-					var startingSlide = that.find('.fp-slide.active');
-
-					//if the slide won#t be an starting point, the default will be the first one
-					if(!index && startingSlide.length == 0){
-						$(this).addClass('active');
-					}
-
-					//is there a starting point for a non-starting section?
-					else{
-						silentLandscapeScroll(startingSlide);
-					}
-
 					$(this).css('width', slideWidth + '%');
 
 					if(options.verticalCentered){
 						addTableClass($(this));
 					}
 				});
+
+				var startingSlide = that.find('.fp-slide.active');
+
+				//if the slide won#t be an starting point, the default will be the first one
+				if(startingSlide.length == 0){
+					slides.eq(0).addClass('active');
+				}
+
+				//is there a starting point for a non-starting section?
+				else{
+					silentLandscapeScroll(startingSlide);
+				}
+
 			}else{
 				if(options.verticalCentered){
 					addTableClass($(this));
@@ -620,9 +622,7 @@
 				next = $('.fp-section').first();
 			}
 
-			if(next.length > 0 ||
-				(!next.length &&
-				(options.loopBottom || options.continuousVertical))){
+			if(next.length){
 				scrollPage(next, null, false);
 			}
 		};
@@ -921,7 +921,9 @@
 				$('<div class="fp-tooltip ' + options.navigationPosition +'">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);
 			},
 			mouseleave: function(){
-				$(this).find('.fp-tooltip').fadeOut().remove();
+				$(this).find('.fp-tooltip').fadeOut(200, function() {
+					$(this).remove();
+				});
 			}
 		}, '#fp-nav li');
 
@@ -1124,14 +1126,14 @@
 		 * Resizing of the font size depending on the window size as well as some of the images on the site.
 		 */
 		function resizeMe(displayHeight, displayWidth) {
-			//Standard height, for which the body font size is correct
+			//Standard dimensions, for which the body font size is correct
 			var preferredHeight = 825;
-			var windowSize = displayHeight;
+			var preferredWidth = 900;
 
 			/* Problem to be solved
 
-			if (displayHeight < 825) {
-				var percentage = (windowSize * 100) / preferredHeight;
+			if (displayHeight < preferredHeight) {
+				var percentage = (displayHeight * 100) / preferredHeight;
 				var newFontSize = percentage.toFixed(2);
 
 				$("img").each(function() {
@@ -1144,12 +1146,10 @@
 				});
 			}*/
 
-			if (displayHeight < 825 || displayWidth < 900) {
-				if (displayWidth < 900) {
-					windowSize = displayWidth;
-					preferredHeight = 900;
-				}
-				var percentage = (windowSize * 100) / preferredHeight;
+			if (displayHeight < preferredHeight || displayWidth < preferredWidth) {
+				var heightPercentage = (displayHeight * 100) / preferredHeight;
+				var widthPercentage = (displayWidth * 100) / preferredWidth;
+				var percentage = Math.min(heightPercentage, widthPercentage);
 				var newFontSize = percentage.toFixed(2);
 
 				$("body").css("font-size", newFontSize + '%');
@@ -1490,22 +1490,26 @@
 		* Adds the possibility to auto scroll through sections on touch devices.
 		*/
 		function addTouchHandler(){
-			//Microsoft pointers
-			MSPointer = getMSPointer();
+			if(isTouchDevice || isTouch){
+				//Microsoft pointers
+				MSPointer = getMSPointer();
 
-			$(document).off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);
-			$(document).off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);
+				$(document).off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);
+				$(document).off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);
+			}
 		}
 
 		/**
 		* Removes the auto scrolling for touch devices.
 		*/
 		function removeTouchHandler(){
-			//Microsoft pointers
-			MSPointer = getMSPointer();
+			if(isTouchDevice || isTouch){
+				//Microsoft pointers
+				MSPointer = getMSPointer();
 
-			$(document).off('touchstart ' + MSPointer.down);
-			$(document).off('touchmove ' + MSPointer.move);
+				$(document).off('touchstart ' + MSPointer.down);
+				$(document).off('touchmove ' + MSPointer.move);
+			}
 		}
 
 

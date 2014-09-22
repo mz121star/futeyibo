@@ -1,6 +1,10 @@
 define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head','modernizr'], function (extend) {
-     var times=1;
+    var times=1;
+    var _section1 = false;
+    var hasShow = false;
     $(function(){
+        $('.standard').trigger('fitbg');
+        $('.tiploading').remove();
         $(".section13 .bg img").attr("src","images/1/slide131.jpg");
         $(".bg131").animate({'left': '-2000px','top': '2000px'},0);
         $(".bg132").animate({'left': '2000px','top': '-2000px'},0);
@@ -8,88 +12,45 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         $(".bg142").animate({'left': '2000px','top': '-2000px'},0);
         $(".section13 .bg img").attr("src","images/1/slide131.jpg");
         $(".bg133").hide();
-    })
+    });
     $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage','4rdPage','5','6','7','8','9','10','11','12'],
+        anchors: ['1', '2', '3','4','5','6','7','8','9','10','11','12'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
-
         slidesNavigation: true,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-           if(index==9){
-
-               $(".section11 .covered").css({
-                   "background-image":"url('../images/1/slide11_1.jpg')"
-               } );
-              /* $(".bg1111_1 img").css("height",$(document).height())
-               $(".bg1111_11 img").css("height",$(document).height())*/
-               //  $(".bg1111_11").css("height","100%")
-               /*  $(".bg1111_1") .css("height","0px")*/
-               //   setTimeout(function(){$(".bg1111_1").animate({'height': '200px'},1000);},0);
-               /*    setTimeout(function(){$(".bg1111_1").animate({'top': '-200px'},1000);},0);*/
-               window.setTimeout(function(){$(".bg1111_1").animate({'top': '-2000px'},1000)},1000)
-           }
-            if(index==6){
-                s6=0;
-                $(".bg61").animate({opacity: 1,'margin-top': "0%"},0);
+            $('.tip').show();
+            if(index==13){
+                $(".footer").show();
             }
-            if(index==14){
-                $(".footer").show(1000);
-            }
-            /*if(index==10){
-                var i10=100
-               var interval= window.setInterval(function(){
-                   i10=i10-15 ;
-                   $(".bg1111").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity='+i10+')')
-                   if(i10<0){
-                       window.clearInterval(interval)
-                   }
-               },600);
-            }*/
-            //if(index==11){
-                //$(".bg121").css({'left': '0px'},0);
-            //}
             if(index==12){
+                times=1;
                 $(".bg131").animate({'left': '0px','top': '0px'},1000);
                 $(".bg132").animate({'left': '0px','top': '0px'},1000);
                 $(".bg141").animate({'left': '0px',top:'0px'},1000);
                 $(".bg142").animate({'left': '-100px','top':'0px'},1000);
                 $(".bg133").animate({'left': '-2000px'},0,function(){ });
+                //$(".bg133").css("background-image","url(images/1/flag135.png)")
             }
-			
-			if(!Modernizr.csstransitions){
-				extend.afterLoad(anchorLink, index, slideAnchor, slideIndex);
-			}
+            if(index==9){
+               // $('.bg1111_1').delay(800).animate({top:'-800px'},2000);
+                // $('.bg1111').animate({opacity:0},6000);
+                $(".bg10_2").delay(200).animate({'bottom': '250px',left:0},1000);
+                $('.bg10_1').delay(300).animate({'margin-left': '230px',right: '100px',top: '20px'},1000);
+                $('.bg1111_111').delay(0).animate({top:'0px'},0);
+            }
+
+            if(!Modernizr.csstransitions){
+                extend.afterLoad(anchorLink, index, slideAnchor, slideIndex);
+            }
         } ,
         onLeave: function(index, nextIndex, direction){
-
+            $('.tip').hide();
             if(index==1){
-                //setTimeout(function(){
-                    $(".bg13").animate({'top': '-2000px',opacity:0});
-                 setTimeout(function(){$(".bg12").css({'left': ''});},1000);
-                setTimeout(function(){$(".bg11").css({'left': ''});},1000);
-                    //$(".bg13").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
-                //},0);
-				
-				//$(".bg13").hide("slide", { direction: "top"  }, 500, function () {
-                //});
-                //$(".bg14").hide("slide", { direction: "top"  }, 500, function () {
-                //});
-                setTimeout(function(){
-                    $(".bg14").animate({'bottom': '-2000px' },0);
-                    $(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)')
-                },0);
-            }
-            if(index==6){
-                s6=0;
-                $(".bg61").animate({opacity: 1,'margin-top': "0%"},0);
-            }
-            if(index==9 ){
-                $(".section11 .changeable").animate({
-                    height: '100px'
-                }, 1000 );
-                window.setTimeout(function(){$(".bg1111_1").animate({'top': '-0px'},0)},0)
+                $(".bg13").animate({'top': '-2000px',opacity:0});
+                $(".bg12").animate({'left': '25%'});
+                $(".bg11").animate({'left': '-290px'});
+                $(".bg14").animate({'bottom': '-2000px' ,opacity:0},0,function(){ _section1 = false;});
             }
             if(index==11){
 
@@ -99,23 +60,42 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $(".bg142").animate({'left': '2000px','top': '-2000px'},0);
                 $(".section13 .bg img").attr("src","images/1/slide131.jpg");
             }
+            if(index==9){
+                // $('.bg1111').stop(true).animate({opacity:1},0);
+                $('.bg1111_1').animate({top:300},0);
+                $(".bg10_2").animate({left:'-800px'});
+                $('.bg10_1').animate({right: '-2000px'});
+
+                $('.bg1111_111').delay(0).animate({top:'300px'},1000);
+            }
+            if(index==8 && direction=='down'){
+                $('.bg1111_1').delay( 0).animate({top:'-800px'},2000);
+            }
+            if(index==10 && direction=='up'){
+                $('.bg1111_1').delay( 0).animate({top:'-800px'},2000);
+            }
             if(index==12){
-                times=1;
+                hasShow = false;
+                $('.tip').show();
+                $(".footer").hide(1000,function(){});
+                $('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img').removeAttr('style');
+                $(".bg133").removeAttr("style");
                 $(".bg133").show();
                 $(".bg133").animate({'left': '-2000px'},0);
                 $(".bg131").animate({'left': '0px','top': '0px'},0);
                 $(".bg132").animate({'left': '0px','top': '0px'},0);
-                $(".bg141").animate({'left': '0px',top:'0px'},0); 
+                $(".bg141").animate({'left': '0px',top:'0px'},0);
                 $(".bg142").animate({'left': '-100px','top':'0px'},0);
                 $(".section13 .bg img").attr("src","images/1/slide13.jpg");
-             //   $(".bg133").css("background-image","url(images/1/flag13.png)")
+
+                $('.bg133').animate({'top':'+=360px'},0);
             }
-            if(index==14){
-                $(".footer").hide(1000);
+            if(index==13){
+                $(".footer").hide();
             }
-			if(!Modernizr.csstransitions){
-				extend.onLeave(index, nextIndex, direction);
-			}
+            if(!Modernizr.csstransitions){
+                extend.onLeave(index, nextIndex, direction);
+            }
         }
     });
     function stopEvent(){ //阻止冒泡事件
@@ -129,182 +109,117 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             window.event.cancelBubble = true;
         }
     }
-    var _section1 = false;
+
     var _section13 = false;
     var isanimated=function(){
         return $(".bg131").is(":animated")|| $(".bg132").is(":animated") ||  $(".bg141").is(":animated") ||  $(".bg142").is(":animated");
     }
     $(".section1").mousewheel(function (e) {
+
         if (!_section1) {
-            $(".bg13").animate({opacity:1});//.css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=100)')
-			$(".bg14").animate({opacity:1});
-            //$(".bg14").css('filter', 'progid:DXImageTransform.Microsoft.Alpha(opacity=100)')
-          /*  $(".bg12").hide("slide", { direction: "right" }, 3000, function () {});
-			
-            $(".bg11").hide("slide", { direction: "left"  }, 2000, function () {});*/
+            $(".bg13").animate({opacity:1});
+            $(".bg14").animate({opacity:1});
+
             setTimeout(function(){$(".bg12").animate({'left': '2000px'},1000);},0);
             setTimeout(function(){$(".bg11").animate({'left': '-2000px'},1000);},0);
-                setTimeout(function(){$(".bg13").animate({'top': '50px'},1000);},0);
-                setTimeout(function(){$(".bg14").animate({'bottom': '0px'},1000);},0);
-                $(".bg15").show("shake", { direction: "top"  }, 1000, function () {
-                    _section1 = true;
-                });
+            setTimeout(function(){$(".bg13").animate({'top': '100px'},1000);},0);
+            setTimeout(function(){$(".bg14").animate({'bottom': '0px'},1000);},0);
+            $(".bg15").show("shake", { direction: "top"  }, 1000, function () {
+                _section1 = true;
+            });
 
             stopEvent()
             return false;
         }
     });
-    var s6=10;
-    $(".section6") .mousewheel(function (e) {
-           console.log(s6)
-        if(e.deltaY<0){     //往下滚动
-            s6=s6+2
-            if(s6<60){
-                $(".bg61").animate({opacity: 1,'margin-top': s6+"%"},0);
-                stopEvent()
-                return false;
-            }
+
+    $(".section13") .mousewheel(function (e) {
+        if(isanimated()) {
+            stopEvent()
+            return false;
         }
-        if(e.deltaY>0){   //往上滚动
-            s6=s6-2
-            if(s6>0){
-                $(".bg61").animate({opacity: 1,'margin-top': s6+"%"},0);
-                stopEvent()
-                return false;
-            }
-        }
-        s6=0;
-        $(".bg61").animate({opacity: 1,'margin-top': "0%"},0);
-
-
-
-
-    });
-   $(".section13") .mousewheel(function (e) {
-          if(isanimated()) {
-              stopEvent()
-              return false;
-          }
-       if (!_section13) {
+        if (!_section13) {
             if(times==1){           //飞出前两个
                 $(".bg133").show();
-                 $(".bg131").animate({'left': '-2000px','top': '2000px'},1000);
-              $(".bg132").animate({'left': '2000px','top': '-2000px'},1000,function(){
+                $(".bg131").animate({'left': '-2000px','top': '2000px'},1000);
+                $(".bg132").animate({'left': '2000px','top': '-2000px'},1000,function(){
 
-              });
-               $(".bg133").animate({'left': '100px','top':'200px'},1000,function(){times++;});
+                });
+                $(".bg133").animate({'left': '100px','top':'200px'},1000,function(){times++;});
                 times++
                 stopEvent()
                 return false;
 
             }
-           if(times==2){                   //全部飞入遮挡住
-               $(".bg131").animate({'left': '0px','top': '0px'},1000);
-               $(".bg132").animate({'left': '0px','top': '0px'},0);
+            if(times==3){          //再次飞出，展现双孔杯架
+                $(".bg133").animate({'left': '-2000px' },0);
+                $(".section13 .bg img").attr("src","images/1/slide14.jpg");
+                $(".bg133").css("background-image","url(images/1/flag14.png)");
+                $(".bg132").animate({'left': '0px','top': '0px'},0);
+                $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
+                $(".bg141").animate({'left': '2000px','top': '-2000px'},1000);
+                $(".bg133").animate({'left': '100px'},1000,function(){times++;});
+                times++
+                stopEvent()
+                return false;
 
-               $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
-               $(".bg133").animate({'left': '-2000px','top': '2000px'},1000);
-               $(".bg141").animate({'left': '-200px','top': '2000px'},1000);
-           $(".bg141").animate({'left': '0px','top':'0px'},0,function(){times++;$(".section13 .bg img").attr("src","images/1/slide13.jpg");});
-
-               stopEvent()
-               return false;
-           }
-           if(times==3){          //再次飞出，展现双孔杯架
-               $(".bg133").animate({'left': '-2000px' },0);
-               $(".section13 .bg img").attr("src","images/1/slide14.jpg");
-               $(".bg133").css("background-image","url(images/1/flag14.png)");
-             //  $(".bg131").animate({'left': '0px','top': '0px'},1000);
-               $(".bg132").animate({'left': '0px','top': '0px'},0);
-
-             //  $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
+            }
+            if(times==5){    //再次飞出展现迷你小冰箱
+                $(".bg133").animate({'left': '-2000px'},0);
+                $(".bg132").animate({'left': '0px','top': '0px'},0);
+                $(".bg141").animate({'left': '0px',top:'0px'},0,function(){times++;$(".bg142").animate({'left': '-82px','top':'0'},0);});
 
 
+                $(".section13 .bg img").attr("src","images/1/slide15.jpg");
+                $(".bg133").css("background-image","url(images/1/flag15.png)")
+                $(".bg133").animate({'left': '100px'},1000);
 
-            //   $(".bg131").animate({'left': '0px','top': '0px'},500);
-               $(".bg132").animate({'left': '-2000px','top': '2000px'},1000);
-               $(".bg141").animate({'left': '2000px','top': '-2000px'},1000);
-               $(".bg133").animate({'left': '100px'},1000,function(){times++;});
-                               times++
-               stopEvent()
-               return false;
-
-           }
-         if(times==4){    //再次飞入遮挡
-
-             $(".bg133").animate({'left': '-2000px'},0);
-            //$(".bg131").animate({'left': '0px','top': '0px'},1000);
-             $(".bg132").animate({'left': '0px','top': '0px'},1000);
-             $(".bg141").animate({'left': '0px',top:'0px'},1000,function(){times++;$(".bg142").animate({'left': '-82px','top':'0'},0);}); 
-			 
-                
-             stopEvent()
-             return false;
-           }
-           if(times==5){    //再次飞出展现迷你小冰箱
-               $(".bg133").animate({'left': '-2000px'},0);
-               //$(".bg131").animate({'left': '0px','top': '0px'},1000);
-               $(".bg132").animate({'left': '0px','top': '0px'},0);
-               $(".bg141").animate({'left': '0px',top:'0px'},0,function(){times++;$(".bg142").animate({'left': '-82px','top':'0'},0);});
+                $(".bg131").animate({'left': '0px','top': '0px'},0);
+                $(".bg132").animate({'left': '0px','top': '0px'},0);
+                $(".bg141").animate({'left': '-2000px','top': '2000px'},1000);
+                $(".bg142").animate({'left': '2000px','top':'-2000px'},1000,function(){ });
 
 
-               $(".section13 .bg img").attr("src","images/1/slide15.jpg");
-               $(".bg133").css("background-image","url(images/1/flag15.png)")
-               $(".bg133").animate({'left': '100px'},1000); 
+                stopEvent()
+                return false;
+            }
+            if(times==6){    //再次飞入遮挡
 
-               $(".bg131").animate({'left': '0px','top': '0px'},0);
-               $(".bg132").animate({'left': '0px','top': '0px'},0);
-               $(".bg141").animate({'left': '-2000px','top': '2000px'},1000);
-               $(".bg142").animate({'left': '2000px','top':'-2000px'},1000,function(){ });
+                $(".bg133").animate({'left': '-2000px'},0);
+                $(".bg133").css("background-image","url(images/1/flag16.png)")
+                $(".bg131").animate({'left': '0px','top': '0px'},1000);
+                $(".bg132").animate({'left': '0px','top': '0px'},1000);
+                $(".bg141").animate({'left': '0px',top:'0px'},0);
+                $(".bg142").animate({'left': '-100px','top':'0px'},0,function(){times++; $(".section13 .bg img").attr("src","images/1/slide16.jpg");});
+                $(".bg141").animate({'left': '-2000px','top': '2000px'},1000);
+                $(".bg142").animate({'left': '2000px','top':'-2000px'},1000,function(){times++;$(".section13 .bg img").attr("src","images/1/slide16.jpg");});
+                $(".bg133").animate({'left': '100px'},500);
+                stopEvent()
+                return false;
+            }
+            if(times==8){
+                if(e.deltaY < 0 && !hasShow){
+                    hasShow=true;
+                    $('.bg133').delay(500).animate({'top':'-=360px'});
+                    //$(".footer").show(1000);
+                    var bg = $('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img');
+                    bg.animate({'top':'-360px'},500).css({'position':'absolute'});
+                    $(".footer").delay(100).show(100);
+                    $('.tip').hide();
+                    stopEvent();
+                    return false;
+                }
+            }
+        }
+    });
 
-               
-               stopEvent()
-               return false;
-           }
-           if(times==6){    //再次飞入遮挡
+    /*   window.onresize=function(){
+     $('.standard').delay(100).trigger('fitbg');
+     };*/
 
-               $(".bg133").animate({'left': '-2000px'},0);
-               $(".bg133").css("background-image","url(images/1/flag16.png)")
-               $(".bg131").animate({'left': '0px','top': '0px'},1000);
-               $(".bg132").animate({'left': '0px','top': '0px'},1000);
-               $(".bg141").animate({'left': '0px',top:'0px'},0);
-               $(".bg142").animate({'left': '-100px','top':'0px'},0,function(){times++; $(".section13 .bg img").attr("src","images/1/slide16.jpg");});
-               $(".bg141").animate({'left': '-2000px','top': '2000px'},1000);
-               $(".bg142").animate({'left': '2000px','top':'-2000px'},1000,function(){times++;$(".section13 .bg img").attr("src","images/1/slide16.jpg");});
-               $(".bg133").animate({'left': '100px'},500);
-               stopEvent()
-               return false;
-           }
-         /*  if(times==7){    //再次飞出展现迷你小冰箱
-               $(".bg133").css("background-image","url(images/1/flag16.png)")
-               $(".bg133").animate({'left': '100px'},500);
-
-               $(".bg131").animate({'left': '0px','top': '0px'},1000);
-               $(".bg132").animate({'left': '0px','top': '0px'},1000);
-               $(".bg141").animate({'left': '-200px','top': '2000px'},1000);
-               $(".bg142").animate({'left': '900px','top':'-2000px'},1000,function(){times++;$(".section13 .bg img").attr("src","images/1/slide16.jpg");});
-
-               
-               stopEvent()
-               return false;
-           }*/
-           else{
-
-           }
-
-       }
-   });
-    $(".section2").on("mouseover",function (e) {
-
-        _section1 = false;
-            $(".bg12").show("slide", { direction: "right" }, 3000, function () {
-            });
-            $(".bg11").show("slide", { direction: "left"  }, 2000, function () {
-
-            });
-
-
-    }) ;
+    $('.standard').on('fitbg',function(){
+        $(this).css('margin-left',-($(this).width() - $(document).width())/2);
+    });
 
 
     $('.first').coveringBad({
@@ -315,19 +230,12 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
         direction   : "vertical"
     });
 
-
-
-
-    // $(window).resize(function() {
-        //console.log($(".standard").height()+"px")
     if(document.location.href.indexOf("?visual=1")>0){
 
-         $(".section .bg img").css({width:'100%',height:'auto'})
+        $(".section .bg img").css({width:'100%',height:'auto'})
         $("body").css({'min-width':'200px' })
         $(".section").css("height",$(".standard").height()+"px")
         $(".fp-tableCell").css("height",$(".standard").height()+"px")
 
     }
-
-   // });
-})
+});

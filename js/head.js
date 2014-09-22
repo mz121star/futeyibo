@@ -37,6 +37,17 @@ $(function($) {
 
     });
 
+    nav.on( 'mouseleave','li', function(evt) {
+        var target = $(evt.currentTarget),
+            sub = $('.sub_nav', target);
+        switch (evt.type) {
+            case 'mouseleave':
+                sub.hide();
+                break;
+        }
+        return false;
+    });
+
     nav.on( 'mouseenter','li', function(evt) {
         var target = $(evt.currentTarget),
             sub = $('.sub_nav', target);
@@ -48,10 +59,9 @@ $(function($) {
                 clearTimeout(outItv);
                 var left = target.prop('offsetLeft');
                 left = left>0?left-12:left;
-
                 hoverLi.stop(true).animate({
                     left: left
-                }, 'slow', 'easeOutBounce');
+                }, 'slow','easeOutBounce');
                 //更换滑动块背景
                 if(hoverLi.hasClass('last')){
                     setTimeout(function(){
@@ -85,6 +95,11 @@ $(function($) {
         }
         return false;
     });
+
+    setTimeout(function(){
+        var left = $('.header-nav li.on').prop('offsetLeft');
+        left = left>0?left-12:left;
+    },100);
 
     $.bind('nav.public', function(evt, index) {
         curNav = $('li', nav).eq(index);
