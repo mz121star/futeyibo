@@ -96,10 +96,14 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
             //$(".footer").show(1000);
             var bg = $('.section6 .bg img');
             bg.animate({'top':'-360px'},500).css({'position':'absolute'});
+            $("#fp-nav").hide();
             $(".footer").delay(100).show(100);
             $('.tip').hide();
             stopEvent();
             return false;
+        }
+        if(e.deltaY > 0){
+            $("#fp-nav").show();
         }
     });
     function stopEvent(){ //阻止冒泡事件
