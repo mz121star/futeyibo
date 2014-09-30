@@ -20,7 +20,7 @@ var hasShow = false;
 				if(index==3){
 					$('.bg21').animate({top:0,right:0,'margin-left':'-608px'},1000);
 					$(".bg2-32").delay(100).animate({'left': '0',top:0,opacity:1},1000);
-					$(".bg2-33").delay(100).animate({'left': '40%',opacity:1},1000);
+					$(".bg2-33").delay(100).animate({'left': '30%',opacity:1},1000);
                     $(".bg2-34").delay(100).animate({'left':0},1000);
 					$(".bg2-31_1").delay(300).animate({opacity:0},2000);	
 				}
@@ -68,6 +68,7 @@ var hasShow = false;
     
     $(".section4").mousewheel(function (e) {
 
+
         if(e.deltaY < 0 && !hasShow){
             hasShow=true;
             var bg241 = $('.bg2-41');
@@ -84,7 +85,9 @@ var hasShow = false;
             $("#fp-nav").show();
         }
 
+
     });
+
 
     function stopEvent(){ //阻止冒泡事件
         //取消事件冒泡
@@ -98,29 +101,36 @@ var hasShow = false;
         }
     }
 
+
       $(function(){
           $('.standard').trigger('fitbg');
-          $('.tiploading').remove();
+          $('.loadingmode').remove();
           $(".bg2-11").delay(100).animate({"right":"0px"},1000,function(){});
       })
+
 
  /*   window.onresize=function(){
         $('.standard').delay(100).trigger('fitbg');
     };*/
 
+
     $('.standard').on('fitbg',function(){
-        $(this).css('margin-left',-($(this).width() - $(document).width())/2);
+        $(this).css('margin-left',-($(this).width() - $("body").width())/2);
     });
     // $(window).resize(function() {
 
+
     if(document.location.href.indexOf("?visual=1")>0){
+
 
         $(".section .bg img").css({width:'100%',height:'auto'})
         $("body").css({'min-width':'200px' });
         $(".section").css("height",$(".standard").height()+"px")
         $(".fp-tableCell").css("height",$(".standard").height()+"px")
 
+
     }
+
 
    // });
 })

@@ -1,10 +1,11 @@
+
 define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head','modernizr'], function (extend) {
     var times=1;
     var _section1 = false;
     var hasShow = false;
     $(function(){
         $('.standard').trigger('fitbg');
-        $('.tiploading').remove();
+    $('.loadingmode').remove();
         $(".section13 .bg img").attr("src","images/1/slide131.jpg");
         $(".bg131").animate({'left': '-2000px','top': '2000px'},0);
         $(".bg132").animate({'left': '2000px','top': '-2000px'},0);
@@ -37,10 +38,10 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 //$(".bg133").css("background-image","url(images/1/flag135.png)")
             }
             if(index==9){
-               // $('.bg1111_1').delay(800).animate({top:'-800px'},2000);
+                // $('.bg1111_1').delay(800).animate({top:'-800px'},2000);
                 // $('.bg1111').animate({opacity:0},6000);
-                $(".bg10_2").delay(200).animate({'bottom': '250px',left:0},1000);
-                $('.bg10_1').delay(300).animate({'margin-left': '230px',right: '100px',top: '20px'},1000);
+                /*  $(".bg10_2").delay(200).animate({'bottom': '250px',left:0},1000);
+                 $('.bg10_1').delay(300).animate({'margin-left': '230px',right: '100px',top: '20px'},1000);*/
                 $('.bg1111_111').delay(0).animate({top:'0px'},0);
             }
 
@@ -77,12 +78,12 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 $('.bg1111_111').delay(0).animate({top:'300px'},1000);
             }
             if(index==8 && direction=='down'){
-              // $('.bg1111_1').delay( 0).animate({top:'-800px'},2000);
+                // $('.bg1111_1').delay( 0).animate({top:'-800px'},2000);
                 $(".bg1111_1").delay(0).animate({opacity: 1,'top': "0px"},0);
                 s9=0;
             }
             if(index==10 && direction=='up'){
-               //$('.bg1111_1').delay( 0).animate({top:'-800px'},2000);
+                //$('.bg1111_1').delay( 0).animate({top:'-800px'},2000);
                 $(".bg1111_1").delay(0).animate({opacity: 1,'top': "0px"},0);
                 s9=0;
             }
@@ -110,9 +111,9 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             }
         }
     });
-    function stopEvent(){ //阻止冒泡事件
-        //取消事件冒泡
-        var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
+    function stopEvent(){ //闃绘鍐掓场浜嬩欢
+        //鍙栨秷浜嬩欢鍐掓场
+        var e=arguments.callee.caller.arguments[0]||event; //鑻ョ渷鐣ユ鍙ワ紝涓嬮潰鐨別鏀逛负event锛孖E杩愯鍙互锛屼絾鏄叾浠栨祻瑙堝櫒灏变笉鍏煎
         if (e && e.stopPropagation) {
             // this code is for Mozilla and Opera
             e.stopPropagation();
@@ -128,16 +129,17 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
     }
     var s6=10;
     $(".section6") .mousewheel(function (e) {
-        console.log(s6)
-        if(e.deltaY<0){     //往下滚动
+
+        if(e.deltaY<0){     //寰€涓嬫粴鍔�
             s6=s6+2
+
             if(s6<60){
                 $(".bg61").animate({opacity: 1,'margin-top': s6+"%"},0);
                 stopEvent()
                 return false;
             }
         }
-        if(e.deltaY>0){   //往上滚动
+        if(e.deltaY>0){   //寰€涓婃粴鍔�
             s6=s6-2
             if(s6>0){
                 $(".bg61").animate({opacity: 1,'margin-top': s6+"%"},0);
@@ -152,7 +154,11 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
     var s9=0;
     $(".section10") .mousewheel(function (e) {
 
-        if(e.deltaY<0){     //往下滚动
+        if(s9<-300){
+            $(".bg10_2").delay(0).animate({'bottom': '250px',left:0},1000);
+            $('.bg10_1').delay(0).animate({'margin-left': '230px',right: '100px',top: '20px'},1000);
+        }
+        if(e.deltaY<0){     //寰€涓嬫粴鍔�
             s9=s9-50;
             if(s9>-800){
                 $(".bg1111_1").animate({opacity: 1,'top': s9+"px"},0);
@@ -161,6 +167,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             }
         }
         $(".bg1111_1").delay(1000).animate({opacity: 1,'top': "0px"},0);
+        $(".bg10_2").animate({left:'-800px'});
+        $('.bg10_1').animate({right: '-2000px'});
         s9=0;
 
     });
@@ -189,7 +197,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             return false;
         }
         if (!_section13) {
-            if(times==1){           //飞出前两个
+            if(times==1){           //椋炲嚭鍓嶄袱涓�
                 $(".bg133").show();
                 $(".bg131").animate({'left': '-2000px','top': '2000px'},1000);
                 $(".bg132").animate({'left': '2000px','top': '-2000px'},1000,function(){
@@ -201,7 +209,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 return false;
 
             }
-            if(times==3){          //再次飞出，展现双孔杯架
+            if(times==3){          //鍐嶆椋炲嚭锛屽睍鐜板弻瀛旀澂鏋�
                 $(".bg133").animate({'left': '-2000px' },0);
                 $(".section13 .bg img").attr("src","images/1/slide14.jpg");
                 $(".bg133").css("background-image","url(images/1/flag14.png)");
@@ -214,7 +222,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 return false;
 
             }
-            if(times==5){    //再次飞出展现迷你小冰箱
+            if(times==5){    //鍐嶆椋炲嚭灞曠幇杩蜂綘灏忓啺绠�
                 $(".bg133").animate({'left': '-2000px'},0);
                 $(".bg132").animate({'left': '0px','top': '0px'},0);
                 $(".bg141").animate({'left': '0px',top:'0px'},0,function(){times++;$(".bg142").animate({'left': '-82px','top':'0'},0);});
@@ -233,7 +241,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                 stopEvent()
                 return false;
             }
-            if(times==6){    //再次飞入遮挡
+            if(times==6){    //鍐嶆椋炲叆閬尅
 
                 $(".bg133").animate({'left': '-2000px'},0);
                 $(".bg133").css("background-image","url(images/1/flag16.png)")
@@ -254,10 +262,14 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
                     //$(".footer").show(1000);
                     var bg = $('.section13 .bg img,.section13 .bg131 img,.section13 .bg132 img');
                     bg.animate({'top':'-360px'},500).css({'position':'absolute'});
+                    $("#fp-nav").hide();
                     $(".footer").delay(100).show(100);
                     $('.tip').hide();
                     stopEvent();
                     return false;
+                }
+                if(e.deltaY > 0){
+                    $("#fp-nav").show();
                 }
             }
         }
@@ -267,8 +279,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
      $('.standard').delay(100).trigger('fitbg');
      };*/
 
-   $('.standard').on('fitbg',function(){
-        $(this).css('margin-left',-($(this).width() - $(document).width())/2);
+    $('.standard').on('fitbg',function(){
+        $(this).css('margin-left',-($(this).width() - $(window).width())/2);
     });
 
 

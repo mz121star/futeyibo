@@ -1,4 +1,4 @@
-﻿/*.bg11 { position: absolute; top: 0; width: 100%; height: 557px; background: url(../images/1/leaf-left.png) 50% 0 no-repeat; transition: all 0s;}
+/*.bg11 { position: absolute; top: 0; width: 100%; height: 557px; background: url(../images/1/leaf-left.png) 50% 0 no-repeat; transition: all 0s;}
 .bg12 { position: absolute; bottom: 10%;    left: 25%;     width: 100%;    height: 575px; background: url(../images/1/leaf-right.png) 50% 0 no-repeat; opacity: 0;  bottom: 90px\0; z-index: 999; top: 0;}
 .bg13 { position: absolute; top: 5%; width: 100%; left: 30%; height: 100%; background: url(../images/1/flag1.png) 50% 0 no-repeat; transition: all 1s; display: none; z-index: 99;}
 .bg14 { position: absolute; bottom: 0px; width: 100%; left: 30%; height: 299px; background: url(../images/1/flag2.png) 50% 0 no-repeat; transition: all 1s; display: none;}
@@ -56,7 +56,7 @@
 .no-csstransitions .bg41 img ,.no-csstransitions .bg42 img{width: 100% ;height: 100%}
 .no-csstransitions .bg43 { position: absolute; bottom: -449px; width: 100%; height: 449px; margin-bottom: -130px; background: url(../images/1/flag7.png) 50% 0 no-repeat;left:15%; }
 .no-csstransitions .bg44 { position: absolute; bottom: -449px; width: 631px; height: 635px; margin-bottom: -130px; background: url(../images/redshape.png) 50% 0 no-repeat; right: -900px;}
-.bg51, .bg52, .bg53, .bg54 { position: absolute; z-index: 1; width: 286px; left: 70%; top: 20%; padding-top: 210px; color: #fff;}
+.bg51, .bg52, .bg53, .bg54 { position: absolute; z-index: 1; width: 286px; left: 60%; top: 20%; padding-top: 210px; color: #fff;}
 .section5 h4 { margin-bottom: 12px; font-size: 23px; font-weight: 500;}
 .section5 p { font-size: 14px;}
 .no-csstransitions .bg51 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); background: url(../images/1/flag8.png) 50% 0 no-repeat; opacity: 0; }
