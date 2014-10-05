@@ -131,6 +131,10 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
     var s6=0;
     var s6move = $(window).height()*0.25;
     $(".section6") .mousewheel(function (e) {
+        if($(".bg61").is(":animated")|| $(".bg61 img").is(":animated")){
+            stopEvent();
+            return false;
+        }
         $(".bg61").css('overflow','hidden');
         if(e.deltaY<0){     //寰€涓嬫粴鍔�
             s6=s6+s6move;
