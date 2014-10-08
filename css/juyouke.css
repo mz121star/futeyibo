@@ -4,7 +4,7 @@ body.hidden {overflow: hidden;}
 .tiploading{position: absolute;
     z-index: 1000;
     top: 40%;
-    left: 51%;}
+    left: 39%;}
 * {	-moz-box-sizing: border-box;	-webkit-box-sizing: border-box;	box-sizing: border-box;}
 h1 {font-family: Helvetica, Arial, Verdana;	font-weight:normal;font-size:92px;color:#222222;}
 .pagewrap {height: 100%;}
