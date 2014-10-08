@@ -32,7 +32,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                 }
                 if(index==3){
                      $(".bg4-31").animate({opacity:0},4000);
-                     $(".bg4-32").delay(1000).animate({top:'100px',right:'200px'},1000);
+                     $(".bg4-32").delay(1000).animate({top:'100px',right:'220px'},1000);
                 }
                 if(index==4){
                     $(".bg71").delay(100).animate({'bottom': '250px',left:0},1000);

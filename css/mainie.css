@@ -1,42 +1,9 @@
-/*.bg11 { position: absolute; top: 0; width: 100%; height: 557px; background: url(../images/1/leaf-left.png) 50% 0 no-repeat; transition: all 0s;}
-.bg12 { position: absolute; bottom: 10%;    left: 25%;     width: 100%;    height: 575px; background: url(../images/1/leaf-right.png) 50% 0 no-repeat; opacity: 0;  bottom: 90px\0; z-index: 999; top: 0;}
-.bg13 { position: absolute; top: 5%; width: 100%; left: 30%; height: 100%; background: url(../images/1/flag1.png) 50% 0 no-repeat; transition: all 1s; display: none; z-index: 99;}
-.bg14 { position: absolute; bottom: 0px; width: 100%; left: 30%; height: 299px; background: url(../images/1/flag2.png) 50% 0 no-repeat; transition: all 1s; display: none;}
-.bg15 { position: absolute; bottom: 0px; width: 100%; left: 45%; height: 124px; background: url(../images/1/flag3.png) 50% 0 no-repeat; transition: all 1s; display: none;}
-.hgroup { position: absolute; width: 554px; height: 176px; left: 50%; top: 25%; margin: 0 0 0 -277px; text-indent: -9999px; background-image: url(../images/slogan.png); opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
-.p11 { position: absolute; left: 50%; top: 50%; width: 600px; margin: 0 0 0 -280px; font-size: 14px; color: #94a7c6; opacity: 0; transition: all 0.5s;}
-.mail { position: absolute; left: 50%; top: -26px; width: 375px; height: 26px; margin-left: -187px; background-image: url(../images/logo.png); transition: all 1s;}
-.mail { float: left; height: 26px; text-indent: -9999px;}
-.mail-163 { float: left; width: 107px;}
-.mail-126 { float: left;width: 108px; margin-left: 23px;}
-.mail-yeah { float: right; width: 115px;}*/
-
 .no-csstransitions .bg21 { /*filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);*/ position: absolute; width: 631px; height: 635px; margin-left: -608px; margin-bottom: 40px; background: url(../images/redshape.png) 0 0 no-repeat; /*opacity: 0;*/ margin-left: -1108px; right: -800px;}
 .no-csstransitions .bg22 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); position: absolute; left: 50%; bottom: 15%; width: 819px; height: 299px; margin-left: -280px; margin-bottom: 70px; background: url(../images/1/leaf-right.png) right 0 no-repeat; transition: all 1s; opacity: 0; margin-left: 320px;}
 .no-csstransitions .bg23 {  position: absolute;  left: 65%; bottom: 15%; width: 819px; height: 325px; margin-left: -409px; background: url(../images/1/flag4.png) 50% 0 no-repeat; bottom: -40%; }
-/*.section strong { position: absolute; left: 50%; top: 15%; z-index: 10; width: 512px; height: 45px; margin-left: -256px; font-size: 24px; font-weight: 500; color: #748A9E; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
-.section h3 { position: absolute; left: 50%; top: 15%; z-index: 10; width: 512px; height: 45px; margin-left: -256px; margin-top: 60px; text-indent: -9999px; background-repeat: no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
-.p1 { position: absolute; left: 50%; top: 15%; width: 510px; margin-left: -255px; margin-top: 130px; font-size: 16px; color: #727F8C; opacity: 0; transition: all 1s;}*/
-
-/*.section2 h3 { background-image: url(../images/t2.png);}
-.section3 h3 { background-image: url(../images/t3.png);}
-.section4 h3 { background-image: url(../images/t4.png);}
-.section5 h3 { background-image: url(../images/t5.png);}
-.section6 strong { width: 561px; margin-left: -280px;}
-.section6 h3 { width: 561px; margin-left: -280px; background-image: url(../images/t6.png);}
-.section7 strong { width: 561px; margin-left: -280px;}
-.section7 h3 { width: 561px; margin-left: -280px; background-image: url(../images/t7.png);}
-.section8 strong { width: 561px; margin-left: -280px;}
-.section8 h3 { width: 561px; margin-left: -280px; background-image: url(../images/t8.png);}
-.section9 strong { width: 609px; margin-left: -304px;}
-.section9 h3 { width: 609px; margin-left: -304px; background-image: url(../images/t9.png);}
-.section9 h3 span { position: absolute; left: -100px; top: -48px; width: 89px; height: 90px; background-image: url(../images/yixin.png);}*/
-
 .no-csstransitions .bg31 {/* filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);*/ position: absolute; left: 50%; top: 15%; width: 575px; height: 199px; margin-left: -396px; margin-bottom: 80px; background-image: url(../images/1/flag5.png); opacity: 0;  z-index: 99;}
 .no-csstransitions .bg32 {/* filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); */position: absolute; /* left: 50%; */ /* bottom: 0; */ width: 630px; height: 630px; /* margin-left: -396px; */ background: url(../images/1/flag6.png) 50% bottom no-repeat; opacity: 0; left: -800px;}
-/*.bg33 { position: absolute; left: 50%; bottom: 0; width: 441px; height: 380px; margin-left: 50%; background: url(../images/bg33.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
-.p3 { position: absolute; width: 430px; left: 50%; top: 15%; margin-top: 250px; margin-left: -100%; font-size: 16px; color: #FFFDE1; opacity: 0; transition: all 1s;}
-*/
+
 .no-csstransitions .bg41 ,.no-csstransitions .bg3-31{
     bottom:0%;
     position: absolute;

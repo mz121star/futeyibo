@@ -107,7 +107,7 @@ var hasShow = false;
       $(function(){
           $('.standard').trigger('fitbg');
           $('.loadingmode').remove();
-          $(".bg2-11").delay(100).animate({"right":"0px"},1000,function(){});
+          $(".bg2-11").delay(100).animate({"right":"100px"},1000,function(){});
           $('.tip').show();
       });
 

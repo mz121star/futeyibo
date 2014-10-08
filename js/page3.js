@@ -19,7 +19,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 			if(!Modernizr.csstransitions){
 				if(index==2){
 					$('.bg21').animate({top:0,right:0},1000);
-					$('.bg3-21').animate({'right':'100px',opacity:1},1000);
+					$('.bg3-21').animate({'right':'220px',opacity:1},1000);
 				}
 				if(index==3){
 					$('.bg3-31').animate({'bottom':'15%','margin-top':0},1000);
@@ -28,7 +28,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 				}
 				if(index==4){
 					$('.bg71').delay(100).animate({'bottom': '250px',left:0},1000);
-					$('.bg3-41').delay(300).animate({left:'100px'},1000);
+					$('.bg3-41').delay(300).animate({left:'220px'},1000);
 				}
 			}
         } ,
