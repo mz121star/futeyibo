@@ -64,7 +64,7 @@
 .no-csstransitions .bg53 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); margin-left: 195px; background: url(../images/bg53.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
 .no-csstransitions .bg54 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); margin-left: 645px; background: url(../images/bg54.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
 
-.no-csstransitions .bg61 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); position: absolute; top: 0px; width: 100%; height: 100%; /* background: url(../images/1/slide6_1.jpg) 50% 0 no-repeat; */ opacity: 1; margin-top: 0%; border-top: 8px solid #fff;}
+.no-csstransitions .bg61 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); position: absolute; top: 0px; width: 100%; height: 100%; /* background: url(../images/1/slide6_1.jpg) 50% 0 no-repeat; */ opacity: 1; margin-top: 0%; border-top: 0px solid #fff;}
 .no-csstransitions .bg61 img{width: 100%;height: 100%}
 .no-csstransitions .bg62 { position: absolute; left: -30%; top: 40%; width: 832px; height: 168px; margin-left: -507px;z-index: 99; background-image: url(../images/1/flag9.png); }
 .no-csstransitions .txt6 { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); position: absolute; left: 90%; bottom: 20%; width: 447px; margin-left: 90px; opacity: 0; transition: all 1s;}
