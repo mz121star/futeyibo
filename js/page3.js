@@ -78,7 +78,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
 
 
             $(".bg3-12").animate({
-                left: '100px'
+                left: '220px'
             },300 );
             $(".bg3-11").animate({
                 left: '100px'
