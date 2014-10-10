@@ -48,7 +48,7 @@ $(function($) {
         return false;
     });
 
-    nav.on( 'mouseenter','li', function(evt) {
+    nav.on( 'mouseenter mouseleave','li', function(evt) {
         var target = $(evt.currentTarget),
             sub = $('.sub_nav', target);
         switch (evt.type) {
@@ -95,6 +95,7 @@ $(function($) {
         }
         return false;
     });
+    nav.find('li:first').trigger('mouseleave');
 
     setTimeout(function(){
         var left = $('.header-nav li.on').prop('offsetLeft');
