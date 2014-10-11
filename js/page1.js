@@ -61,6 +61,8 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             if(index==6){
                 s6=0;
                 $(".bg61").delay(10).animate({opacity: 1,'margin-top': "0%"},0);
+
+
             }
             if(index==11){
 
@@ -156,8 +158,11 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             }
         }
         s6=0;
-        $(".bg61").animate({opacity: 1,'top': "0px"},0,function(){
-            $(".bg61 img").css('margin-top',0);
+       $(".bg61").delay(1000).animate({opacity: 1,'top': "0px"},0,function(){
+
+              $(".bg61 img").css('margin-top',0);
+
+
         });
 
     });
