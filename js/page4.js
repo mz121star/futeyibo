@@ -12,6 +12,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                     $(".bg4-1").delay(100).animate({'opacity': 1,top:'220px',right:'245px'},1000);
                 }
             if(index==3){
+                $(".bg4-31").delay(1000).animate({opacity:0},4000);
             /*    $(".bg4-31").css({"opacity":"0"}).delay(10).animate({"opacity":"0"},1000, 'easeInCirc', function(){  });*/
             }
             if(index==4){
@@ -31,7 +32,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                     $('.bg4-21').delay(300).animate({left:'18%'});
                 }
                 if(index==3){
-                     $(".bg4-31").delay(1000).animate({opacity:0},4000);
+
                      $(".bg4-32").delay(1000).animate({top:'100px',right:'220px'},1000);
                 }
                 if(index==4){
@@ -71,7 +72,7 @@ define(['jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','coveringBad','head'
                     $('.bg4-21').animate({left:'2000px'});
                 }
                 if(index==3){
-                    $(".bg4-31").delay(1000).animate({opacity:1},1000);
+                    //$(".bg4-31").delay(1000).animate({opacity:1},1000);
                     $(".bg4-32").animate({top:'0',right:'2000px'});
                 }
                 if(index==4){

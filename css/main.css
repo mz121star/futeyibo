@@ -1110,7 +1110,7 @@ body .section .bg2-31_1 {
     background-size: cover;
     top: 0;
     left: 0px;
-    transition: all 1s;
+    /*transition: all 1s;*/
     opacity: 1;
     z-index: 99;
 }
@@ -1602,9 +1602,9 @@ body .active .bg2-31_1 {
 }
 
 .active .bg4-31 {
-    opacity: 0;
+    /*opacity: 0;
     transition-delay: 1s;
-    transition-duration: 4s;
+    transition-duration: 4s;*/
 }
 
 .active .bg4-32 {
