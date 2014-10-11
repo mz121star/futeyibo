@@ -158,7 +158,7 @@ define(['ieextend','jquery-ui', 'jquery-fullPage', 'jquery-mousewheel','covering
             }
         }
         s6=0;
-       $(".bg61").delay(1000).animate({opacity: 1,'top': "0px"},0,function(){
+       $(".bg61").delay(500).animate({opacity: 1,'top': "0px"},0,function(){
 
               $(".bg61 img").css('margin-top',0);
 
